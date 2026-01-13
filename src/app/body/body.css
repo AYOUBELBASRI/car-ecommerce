@@ -1,0 +1,14 @@
+.bg-dark-navy {
+    background-color: #0d121f; /* Adjust based on your eye-drop preference */
+  }
+  
+  /* Smooth transitions for the cards */
+  .group:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  /* Blue filter for security image */
+  .security-blue {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(198deg) brightness(104%) contrast(97%);
+  }

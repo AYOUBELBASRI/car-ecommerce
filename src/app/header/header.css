@@ -1,0 +1,39 @@
+.brand-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.7;
+}
+
+.brand-marquee-wrapper {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.brand-marquee-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brand-marquee-content img {
+  flex-shrink: 0;
+  height: 2rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.brand-marquee:hover .brand-marquee-wrapper {
+  animation-play-state: paused;
+}

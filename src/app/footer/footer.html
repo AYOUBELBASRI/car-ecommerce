@@ -1,0 +1,82 @@
+<footer>
+    <section class="bg-[#1e40af] py-12 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-white">
+          <h2 class="text-3xl font-bold mb-2">Ready to find your next ride?</h2>
+          <p class="text-blue-100 text-lg">Get pre-qualified for financing in minutes. No commitment required.</p>
+        </div>
+        <button class="cursor-pointer bg-white text-slate-900 font-bold py-4 px-8 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+          Get Pre-Qualified
+        </button>
+      </div>
+    </section>
+  
+    <section class="bg-black text-white pt-20 pb-10 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-8 h-8 flex items-center justify-center border-2 border-white rounded-md">
+                 <i class="fas fa-car text-sm"></i>
+              </div>
+              <span class="text-2xl font-bold tracking-tight">LuxeWheels</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-xs mb-8">
+              The most trusted marketplace for buying and selling quality vehicles. 
+              We make car ownership easy and transparent.
+            </p>
+            <div class="flex gap-4">
+              @for (social of socialIcons; track social) {
+              <a href="#" 
+                 class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <i [class]="social.icon"></i>
+              </a>
+              }
+            </div>
+          </div>
+  
+          <div>
+            <h4 class="font-bold mb-6">Company</h4>
+            <ul class="space-y-4">
+              @for (link of companyLinks; track link) {
+              <li>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+              </li>
+              }
+            </ul>
+          </div>
+  
+          <div>
+            <h4 class="font-bold mb-6">Support</h4>
+            <ul class="space-y-4">
+              @for (link of supportLinks; track link) {
+              <li>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+              </li>
+              }
+            </ul>
+          </div>
+  
+          <div>
+            <h4 class="font-bold mb-6">Buy & Sell</h4>
+            <ul class="space-y-4">
+              @for (link of buySellLinks; track link) {
+              <li>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+  
+        <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
+          <p>© {{currentYear}} AutoMarket Inc. All rights reserved.</p>
+          <div class="flex gap-6">
+            <button class="hover:text-white transition-colors">English (US)</button>
+            <button class="hover:text-white transition-colors">USD ($)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
