@@ -42,7 +42,7 @@ export class Body {
 
   testimonials: Testimonial[] = [
     { 
-      name: 'Sarah Jenkins', 
+      name: 'Jessica', 
       role: 'Verified Buyer', 
       text: 'I sold my car in 20 minutes and got a great price. The process was transparent.', 
       rating: 5,
