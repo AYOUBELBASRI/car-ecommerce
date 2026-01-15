@@ -3,25 +3,25 @@
     <!-- NAVBAR -->
     <nav class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-2 text-xl font-bold">
+      <a routerLink="/" class="flex items-center gap-2 text-xl font-bold cursor-pointer">
          <span>LuxeWheels </span>
-      </div>
+      </a>
 
       <!-- Links -->
       <ul class="hidden lg:flex gap-8 text-slate-600">
-        <li class="cursor-pointer hover:text-black">Used Cars</li>
-        <li class="cursor-pointer hover:text-black">New Cars</li>
-        <li class="cursor-pointer hover:text-black">Sell Your Car</li>
-        <li class="cursor-pointer hover:text-black">Financing</li>
-        <li class="cursor-pointer hover:text-black">Reviews</li>
+        <li><a routerLink="/used-cars" class="cursor-pointer hover:text-black">Used Cars</a></li>
+        <li><a routerLink="/new-cars" class="cursor-pointer hover:text-black">New Cars</a></li>
+        <li><a routerLink="/sell-car" class="cursor-pointer hover:text-black">Sell Your Car</a></li>
+        <li><a routerLink="/financing" class="cursor-pointer hover:text-black">Financing</a></li>
+        <li><a routerLink="/reviews" class="cursor-pointer hover:text-black">Reviews</a></li>
       </ul>
 
       <!-- Actions -->
       <div class="flex items-center gap-4">
-        <button class="cursor-pointer text-slate-600 hover:text-black">
+        <button routerLink="/signin" class="cursor-pointer text-slate-600 hover:text-black">
           Sign In
         </button>
-        <button class="cursor-pointer bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+        <button routerLink="/signup" class="cursor-pointer bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
           Get Started
         </button>
       </div>
@@ -44,11 +44,13 @@
 
         <div class="mt-6 flex gap-4">
           <button
+            routerLink="/cars"
             class="cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
             Browse Inventory
           </button>
 
           <button
+            routerLink="/how-it-works"
             class="cursor-pointer border border-slate-300 px-6 py-3 rounded-lg hover:bg-slate-100">
             How it Works
           </button>
@@ -112,6 +114,7 @@ class="cursor-pointer relative z-10 -mt-z bg-white rounded-2xl shadow-lg px-6 py
 
 <!-- Button -->
 <button
+  routerLink="/cars"
   class="cursor-pointer w-full lg:w-auto bg-slate-900 text-white px-8 py-4 rounded-xl
          hover:bg-slate-800 transition font-medium">
   Search 12,403 Cars
