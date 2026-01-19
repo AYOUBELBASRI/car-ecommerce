@@ -12,6 +12,7 @@ import { Reviews } from './reviews/reviews';
 import { HowItWorks } from './how-it-works/how-it-works';
 import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
+import { SigninSuccess } from './signin-success/signin-success';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,10 @@ export const routes: Routes = [
   {
     path: 'signin',
     component: SignIn
+  },
+  {
+    path: 'signin-success',
+    component: SigninSuccess
   },
   {
     path: 'signup',
