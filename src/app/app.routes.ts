@@ -13,6 +13,7 @@ import { HowItWorks } from './how-it-works/how-it-works';
 import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
+import { ContactSellerSuccess } from './contact-seller-success/contact-seller-success';
 
 export const routes: Routes = [
   {
@@ -70,5 +71,9 @@ export const routes: Routes = [
   {
     path: 'contact-seller',
     component: User
+  },
+  {
+    path: 'contact-seller-success',
+    component: ContactSellerSuccess
   }
 ];
