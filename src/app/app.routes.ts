@@ -14,7 +14,6 @@ import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
 
-
 export const routes: Routes = [
   {
     path: '',
@@ -29,12 +28,10 @@ export const routes: Routes = [
     component: SignIn
   },
   {
-
     path: 'signin-success',
     component: SigninSuccess
   },
   {
-
     path: 'signup',
     component: SignUp
   },
@@ -55,12 +52,10 @@ export const routes: Routes = [
     component: Financing
   },
   {
-
     path: 'financing-result',
     component: FinancingResult
   },
   {
-
     path: 'reviews',
     component: Reviews
   },

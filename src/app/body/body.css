@@ -5,7 +5,7 @@
   /* Smooth transitions for the cards */
   .group:hover {
     transform: translateY(-4px);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.075s ease-in-out;
   }
 
   /* Blue filter for security image */
