@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 interface Car {
   year: number;
@@ -22,7 +23,7 @@ interface Testimonial {
 
 @Component({
   selector: 'app-body',
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, RouterLink],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
@@ -42,7 +43,7 @@ export class Body {
 
   testimonials: Testimonial[] = [
     { 
-      name: 'Sarah Jenkins', 
+      name: 'Jessica', 
       role: 'Verified Buyer', 
       text: 'I sold my car in 20 minutes and got a great price. The process was transparent.', 
       rating: 5,

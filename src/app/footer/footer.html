@@ -5,7 +5,7 @@
           <h2 class="text-3xl font-bold mb-2">Ready to find your next ride?</h2>
           <p class="text-blue-100 text-lg">Get pre-qualified for financing in minutes. No commitment required.</p>
         </div>
-        <button class="cursor-pointer bg-white text-slate-900 font-bold py-4 px-8 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+        <button routerLink="/financing" class="cursor-pointer bg-white text-slate-900 font-bold py-4 px-8 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
           Get Pre-Qualified
         </button>
       </div>
@@ -16,12 +16,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-2 mb-6">
+            <a routerLink="/" class="flex items-center gap-2 mb-6 cursor-pointer">
               <div class="w-8 h-8 flex items-center justify-center border-2 border-white rounded-md">
                  <i class="fas fa-car text-sm"></i>
               </div>
               <span class="text-2xl font-bold tracking-tight">LuxeWheels</span>
-            </div>
+            </a>
             <p class="text-slate-400 text-sm leading-relaxed max-w-xs mb-8">
               The most trusted marketplace for buying and selling quality vehicles. 
               We make car ownership easy and transparent.
@@ -63,7 +63,15 @@
             <ul class="space-y-4">
               @for (link of buySellLinks; track link) {
               <li>
-                <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+                @if (link === 'Find a Car') {
+                  <a routerLink="/cars" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+                } @else if (link === 'Sell My Car') {
+                  <a routerLink="/sell-car" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+                } @else if (link === 'Car Reviews') {
+                  <a routerLink="/reviews" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+                } @else {
+                  <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm">{{link}}</a>
+                }
               </li>
               }
             </ul>
