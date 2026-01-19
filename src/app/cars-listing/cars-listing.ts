@@ -21,14 +21,15 @@ interface Car {
 })
 export class CarsListing {
   cars: Car[] = [
-    { year: 2021, make: 'Tesla', model: 'Model 3', price: 34900, mileage: '32k miles', fuel: 'Electric', drive: 'AWD', image: 'assets/audii.jpg' },
-    { year: 2022, make: 'BMW', model: '3 Series', price: 42500, mileage: '15k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
-    { year: 2020, make: 'Mercedes', model: 'C-Class', price: 38200, mileage: '28k miles', fuel: 'Hybrid', drive: 'AWD', image: 'assets/merc.jpg' },
-    { year: 2023, make: 'Audi', model: 'A5 Sportback', price: 49900, mileage: '5k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/jag.jpg' },
-    { year: 2021, make: 'Toyota', model: 'Camry', price: 28900, mileage: '25k miles', fuel: 'Hybrid', drive: 'FWD', image: 'assets/audii.jpg' },
-    { year: 2022, make: 'Jaguar', model: 'F-Pace', price: 45900, mileage: '18k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/jag.jpg' },
-    { year: 2020, make: 'Land Rover', model: 'Range Rover', price: 68900, mileage: '30k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/bmww.jpg' },
-    { year: 2023, make: 'Audi', model: 'Q5', price: 42900, mileage: '8k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/merc.jpg' }
+    { year: 2019, make: 'Audi', model: 'RS 7 Sportback (C8 generation)', price: 34900, mileage: '32k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
+    { year: 2018, make: 'BMW', model: 'M3 (F80 generation)', price: 42500, mileage: '15k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
+    { year: 2020, make: 'Mercedes', model: 'SLR 350 4MATIC+', price: 38200, mileage: '28k miles', fuel: 'Hybrid', drive: 'AWD', image: 'assets/merc.jpg' },
+    { year: 2024, make: 'Jaguar', model: 'F-Type Convertible', price: 49900, mileage: '5k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/jag.jpg' },
+    { year: 2023, make: 'Toyota', model: 'Toyota Tacoma (third generation)', price: 28900, mileage: '25k miles', fuel: 'Hybrid', drive: 'FWD', image: 'assets/toyota.jpg' },
+    { year: 2022, make: 'Ford Mustang', model: 'GT (S550 generation)', price: 45900, mileage: '18k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/mustang.jpg' },
+    { year: 2022, make: 'Range Rover', model: 'Sport (L461 generation)', price: 68900, mileage: '30k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/new-range.jpg' },
+    { year: 2023, make: 'Tesla', model: 'Model S (2016–2021 facelift generation)', price: 42900, mileage: '8k miles', fuel: 'Electric', drive: 'AWD', image: 'assets/tesla1.jpg' },
+    { year: 2023, make: 'Dodge', model: '1970 Dodge Challenger R/T', price: 42900, mileage: '8k miles', fuel: 'Electric', drive: 'AWD', image: 'assets/dodge.jpg' }
   ];
 
   totalCars = 12403;
