@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,4 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './financing.css',
 })
 export class Financing {
+  constructor(private router: Router) {}
+
+  goToPreQualification() {
+    this.router.navigate(['/financing-result']);
+  }
 }

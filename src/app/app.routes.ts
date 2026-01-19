@@ -7,9 +7,12 @@ import { UsedCars } from './used-cars/used-cars';
 import { NewCars } from './new-cars/new-cars';
 import { SellCar } from './sell-car/sell-car';
 import { Financing } from './financing/financing';
+import { FinancingResult } from './financing-result/financing-result';
 import { Reviews } from './reviews/reviews';
 import { HowItWorks } from './how-it-works/how-it-works';
 import { CarDetails } from './car-details/car-details';
+import { User } from './user/user';
+import { SigninSuccess } from './signin-success/signin-success';
 
 export const routes: Routes = [
   {
@@ -23,6 +26,10 @@ export const routes: Routes = [
   {
     path: 'signin',
     component: SignIn
+  },
+  {
+    path: 'signin-success',
+    component: SigninSuccess
   },
   {
     path: 'signup',
@@ -45,6 +52,10 @@ export const routes: Routes = [
     component: Financing
   },
   {
+    path: 'financing-result',
+    component: FinancingResult
+  },
+  {
     path: 'reviews',
     component: Reviews
   },
@@ -55,5 +66,9 @@ export const routes: Routes = [
   {
     path: 'car/:id',
     component: CarDetails
+  },
+  {
+    path: 'contact-seller',
+    component: User
   }
 ];
