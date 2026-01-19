@@ -29,10 +29,10 @@ interface Testimonial {
 })
 export class Body {
   trendingCars: Car[] = [
-    { year: 2021, make: 'Tesla', model: 'Model 3', price: 34900, mileage: '32k miles', fuel: 'Electric', drive: 'AWD', image: 'assets/audii.jpg' },
-    { year: 2022, make: 'BMW', model: '3 Series', price: 42500, mileage: '15k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
-    { year: 2020, make: 'Mercedes', model: 'C-Class', price: 38200, mileage: '28k miles', fuel: 'Hybrid', drive: 'AWD', image: 'assets/merc.jpg' },
-    { year: 2023, make: 'Audi', model: 'A5 Sportback', price: 49900, mileage: '5k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/jag.jpg' }
+    { year: 2021, make: 'Audi', model: 'RS 7 Sportback (C8 generation)', price: 34900, mileage: '32k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
+    { year: 2018, make: 'BMW', model: 'M3 (F80 generation)', price: 42500, mileage: '15k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
+    { year: 2020, make: 'Mercedes', model: 'SLR 350 4MATIC+', price: 38200, mileage: '28k miles', fuel: 'Hybrid', drive: 'AWD', image: 'assets/merc.jpg' },
+    { year: 2024, make: 'Jaguar', model: 'F-Type Convertible', price: 49900, mileage: '5k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/jag.jpg' }
   ];
 
   features = [
