@@ -1,100 +1,108 @@
 <main class="antialiased text-slate-900">
 
-    <section class="max-w-7xl mx-auto px-6 py-12">
-      <div class="flex justify-between items-center mb-8">
-        <h2 class="text-2xl font-bold">Trending Near You</h2>
-        <a href="#" class="text-blue-600 font-medium hover:underline flex items-center">
-          View All Inventory <span class="ml-1">→</span>
-        </a>
-      </div>
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-2xl font-bold">Trending Near You</h2>
+      <a routerLink="/cars" class="text-blue-600 font-medium hover:underline flex items-center">
+        View All Inventory <span class="ml-1">→</span>
+      </a>
+    </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        @for (car of trendingCars; track car) {
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden group">
-          <div class="relative h-48 overflow-hidden">
-            <img [src]="car.image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
-              <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </button>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (car of trendingCars; track car) {
+      <div #revealCard class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden group">
+        <div class="relative h-48 overflow-hidden">
+          <img [src]="car.image"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-100">
+          <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
+            <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-slate-800">{{car.year}} {{car.make}} {{car.model}}</h3>
+          <p class="text-xl font-black mt-1">${{car.price | number}}</p>
+          <div class="flex gap-3 mt-4 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+            <span>{{car.mileage}}</span> • <span>{{car.fuel}}</span> • <span>{{car.drive}}</span>
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-slate-800">{{car.year}} {{car.make}} {{car.model}}</h3>
-            <p class="text-xl font-black mt-1">${{car.price | number}}</p>
-            <div class="flex gap-3 mt-4 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
-              <span>{{car.mileage}}</span> • <span>{{car.fuel}}</span> • <span>{{car.drive}}</span>
+          <button [routerLink]="['/car', $index + 1]"
+            class="w-full mt-6 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-all duration-100">
+            View Details
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <section class="bg-dark-navy py-20 text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-16">Why Choose AutoMarket?</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        @for (item of features; track item; let i = $index) {
+        <div #revealCard class="flex flex-col items-center">
+          <div
+            class="w-14 h-14 bg-blue-900/30 rounded-xl border border-blue-500/30 flex items-center justify-center mb-6">
+            @if (i === 0) {
+            <img src="assets/security.png" alt="Security" class="w-6 h-6 object-contain security-blue">
+            } @else if (i === 1) {
+            <img src="assets/wallet.png" alt="Wallet" class="w-6 h-6 object-contain security-blue">
+            } @else {
+            <img src="assets/calendar.png" alt="Calendar" class="w-6 h-6 object-contain security-blue">
+            }
+          </div>
+          <h3 class="text-xl font-bold mb-3">{{item.title}}</h3>
+          <p class="text-slate-400 text-sm leading-relaxed max-w-xs">{{item.desc}}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-[#0f172a]">
+        What Our Customers Say
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        @for (t of testimonials; track t) {
+        <div #revealCard
+          class="bg-white p-10 rounded-3xl border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-100">
+
+          <div class="text-blue-500 mb-6">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.34315 15.3602 2 17.017 2H19.017C20.6739 2 22.017 3.34315 22.017 5V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.01705 21L3.01705 18C3.01705 16.8954 3.91248 16 5.01705 16H8.01705C8.56933 16 9.01705 15.5523 9.01705 15V9C9.01705 8.44772 8.56933 8 8.01705 8H5.01705C3.91248 8 3.01705 7.10457 3.01705 6V5C3.01705 3.34315 4.3602 2 6.01705 2H8.01705C9.6739 2 11.017 3.34315 11.017 5V15C11.017 18.3137 8.33075 21 5.01705 21H3.01705Z" />
+            </svg>
+          </div>
+
+          <p class="text-slate-600 italic leading-relaxed text-lg mb-10">
+            "{{t.text}}"
+          </p>
+
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-full overflow-hidden bg-slate-100 border-2 border-white shadow-sm">
+              <img [src]="t.avatar" [alt]="t.name" class="w-full h-full object-cover">
             </div>
-            <button class="w-full mt-6 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-all">
-              View Details
-            </button>
+            <div>
+              <h4 class="font-bold text-slate-900 leading-tight">{{t.name}}</h4>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-medium text-slate-400">{{t.role}}</span>
+                <div class="flex text-yellow-400 text-[10px]">
+                  @for (star of [1,2,3,4,5]; track star) {
+                  <span>★</span>
+                  }
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         }
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bg-dark-navy py-20 text-white">
-      <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-16">Why Choose AutoMarket?</h2>
-        <div class="grid md:grid-cols-3 gap-12">
-          @for (item of features; track item; let i = $index) {
-          <div class="flex flex-col items-center">
-            <div class="w-14 h-14 bg-blue-900/30 rounded-xl border border-blue-500/30 flex items-center justify-center mb-6">
-              @if (i === 0) {
-                <img src="assets/security.png" alt="Security" class="w-6 h-6 object-contain security-blue">
-              } @else if (i === 1) {
-                <img src="assets/wallet.png" alt="Wallet" class="w-6 h-6 object-contain security-blue">
-              } @else {
-                <img src="assets/calendar.png" alt="Calendar" class="w-6 h-6 object-contain security-blue">
-              }
-            </div>
-            <h3 class="text-xl font-bold mb-3">{{item.title}}</h3>
-            <p class="text-slate-400 text-sm leading-relaxed max-w-xs">{{item.desc}}</p>
-          </div>
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white py-24">
-        <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-4xl font-extrabold text-center mb-16 text-[#0f172a]">
-            What Our Customers Say
-          </h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            @for (t of testimonials; track t) {
-            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-300">
-
-              <div class="text-blue-500 mb-6">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.34315 15.3602 2 17.017 2H19.017C20.6739 2 22.017 3.34315 22.017 5V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.01705 21L3.01705 18C3.01705 16.8954 3.91248 16 5.01705 16H8.01705C8.56933 16 9.01705 15.5523 9.01705 15V9C9.01705 8.44772 8.56933 8 8.01705 8H5.01705C3.91248 8 3.01705 7.10457 3.01705 6V5C3.01705 3.34315 4.3602 2 6.01705 2H8.01705C9.6739 2 11.017 3.34315 11.017 5V15C11.017 18.3137 8.33075 21 5.01705 21H3.01705Z"/>
-                </svg>
-              </div>
-
-              <p class="text-slate-600 italic leading-relaxed text-lg mb-10">
-                "{{t.text}}"
-              </p>
-
-              <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-full overflow-hidden bg-slate-100 border-2 border-white shadow-sm">
-                  <img [src]="t.avatar" [alt]="t.name" class="w-full h-full object-cover">
-                </div>
-                <div>
-                  <h4 class="font-bold text-slate-900 leading-tight">{{t.name}}</h4>
-                  <div class="flex items-center gap-2">
-                    <span class="text-xs font-medium text-slate-400">{{t.role}}</span>
-                    <div class="flex text-yellow-400 text-[10px]">
-                      @for (star of [1,2,3,4,5]; track star) {
-                        <span>★</span>
-                      }
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            }
-          </div>
-        </div>
-      </section>
-
-  </main>
+</main>

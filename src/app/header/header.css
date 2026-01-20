@@ -3,12 +3,15 @@
   overflow: hidden;
   position: relative;
   opacity: 0.7;
+  display: block;
 }
 
 .brand-marquee-wrapper {
   display: flex;
-  width: fit-content;
-  animation: scroll 30s linear infinite;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .brand-marquee-content {
@@ -17,6 +20,7 @@
   justify-content: center;
   white-space: nowrap;
   flex-shrink: 0;
+  gap: 2rem;
 }
 
 .brand-marquee-content img {
@@ -31,9 +35,4 @@
   100% {
     transform: translateX(-50%);
   }
-}
-
-/* Pause on hover */
-.brand-marquee:hover .brand-marquee-wrapper {
-  animation-play-state: paused;
 }
