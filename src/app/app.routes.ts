@@ -14,6 +14,7 @@ import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
 import { Intro } from './intro/intro';
+import { ContactSuccess } from './contact-success/contact-success';
 
 export const routes: Routes = [
   {
@@ -80,5 +81,9 @@ export const routes: Routes = [
   {
     path: 'contact-seller',
     component: User
+  },
+  {
+    path: 'contact-success',
+    component: ContactSuccess
   }
 ];
