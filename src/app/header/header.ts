@@ -17,7 +17,15 @@ export class Header {
     'assets/landrover.png',
     'assets/bmw.png',
     'assets/jaguar.png',
-    'assets/mercedes.png'
+    'assets/mercedes.png',
+    'assets/mark1.png',
+    'assets/mark2.png',
+    'assets/mark3.png',
+    'assets/mark5.png',
+    'assets/mark6.png',
+    'assets/mark7.png'
+
+
   ];
 
   conditions = ['Used Cars', 'New Cars'];

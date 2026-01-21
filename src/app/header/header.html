@@ -1,8 +1,12 @@
-<header class="bg-slate-50">
+<header class="bg-slate-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img [src]="heroImage" alt="Tesla Car" class="w-full h-full object-cover opacity-90" />
+  </div>
 
   <app-navbar></app-navbar>
 
-  <div class="pt-24 px-6 lg:px-16 py-6">
+  <div class="pt-24 px-6 lg:px-16 py-6 relative z-10 text-black">
 
     <!-- VIDEO SECTION -->
     <section class="mt-8 w-full">
@@ -17,12 +21,12 @@
 
       <!-- Text -->
       <div class="max-w-xl">
-        <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
+        <h1 class="text-4xl lg:text-5xl font-bold leading-tight text-black">
           Find the Car <br />
           You Deserve
         </h1>
 
-        <p class="text-slate-600 mt-4">
+        <p class="text-black mt-4">
           Browse thousands of certified vehicles with a 7-day
           money-back guarantee. Quality you can trust, prices you'll love.
         </p>
@@ -40,10 +44,6 @@
         </div>
       </div>
 
-      <!-- Image -->
-      <div class="w-full lg:w-[500px]">
-        <img [src]="heroImage" alt="Tesla Car" class="rounded-2xl shadow-lg w-full object-cover" />
-      </div>
 
     </section>
     <!-- SEARCH BAR -->
@@ -52,7 +52,7 @@
 
       <!-- Condition -->
       <div class="cursor-pointer flex flex-col w-full lg:w-1/5">
-        <span class="text-xs text-slate-500 uppercase">Condition</span>
+        <span class="text-xs text-black uppercase">Condition</span>
         <select class="mt-1 font-medium outline-none">
           @for (c of conditions; track c) {
           <option>{{ c }}</option>
@@ -62,7 +62,7 @@
 
       <!-- Make -->
       <div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6 ">
-        <span class="text-xs text-slate-500 uppercase">Make</span>
+        <span class="text-xs text-black uppercase">Make</span>
         <select class="mt-1 font-medium outline-none">
           @for (m of makes; track m) {
           <option>{{ m }}</option>
@@ -72,7 +72,7 @@
 
       <!-- Model -->
       <div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6">
-        <span class="text-xs text-slate-500 uppercase">Model</span>
+        <span class="text-xs text-black uppercase">Model</span>
         <select class="mt-1 font-medium outline-none">
           @for (m of models; track m) {
           <option>{{ m }}</option>
@@ -82,7 +82,7 @@
 
       <!-- Price -->
       <div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6">
-        <span class="text-xs text-slate-500 uppercase">Price Range</span>
+        <span class="text-xs text-black uppercase">Price Range</span>
         <select class="mt-1 font-medium outline-none">
           @for (p of priceRanges; track p) {
           <option>{{ p }}</option>

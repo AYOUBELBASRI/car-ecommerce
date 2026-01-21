@@ -28,42 +28,17 @@ export class Intro implements AfterViewInit {
         if (!el) return;
         if (typeof el.play !== 'function') return;
 
+        // Ensure video starts from beginning and is muted
+        el.currentTime = 0;
         el.muted = true;
+        el.volume = 0;
 
         const playPromise = el.play();
         if (playPromise) {
             playPromise.catch(() => {
-                // Autoplay with sound can be blocked; user can click video to start.
+                // Autoplay might be blocked by browser; video will still be muted
             });
         }
-
-        const tryUnmute = () => {
-            el.muted = false;
-            el.volume = 1;
-        };
-
-        el.addEventListener(
-            'playing',
-            () => {
-                setTimeout(tryUnmute, 200);
-            },
-            { once: true }
-        );
-
-        const enableSound = () => {
-            el.muted = false;
-            el.volume = 1;
-
-            const p = el.play();
-            if (p) {
-                p.catch(() => {
-                    // Ignore.
-                });
-            }
-        };
-
-        window.addEventListener('pointerdown', enableSound, { once: true });
-        window.addEventListener('keydown', enableSound, { once: true });
     }
 
     onEnded(): void {

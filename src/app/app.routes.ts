@@ -15,6 +15,7 @@ import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
 import { Intro } from './intro/intro';
 import { introRefreshGuard } from './intro/intro-refresh.guard';
+import { ContactSuccess } from './contact-success/contact-success';
 
 export const routes: Routes = [
   {
@@ -94,6 +95,11 @@ export const routes: Routes = [
   {
     path: 'contact-seller',
     component: User,
+    canActivate: [introRefreshGuard]
+  },
+  {
+    path: 'contact-success',
+    component: ContactSuccess,
     canActivate: [introRefreshGuard]
   }
 ];
