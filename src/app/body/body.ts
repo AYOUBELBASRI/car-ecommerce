@@ -1,8 +1,6 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject, PLATFORM_ID } from '@angular/core';
-import { DecimalPipe, isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 interface Car {
   year: number;
@@ -29,10 +27,7 @@ interface Testimonial {
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
-export class Body implements AfterViewInit {
-  @ViewChildren('revealCard') revealCards!: QueryList<ElementRef>;
-
-  private readonly platformId = inject(PLATFORM_ID);
+export class Body {
 
   trendingCars: Car[] = [
     { year: 2021, make: 'Audi', model: 'RS 7 Sportback (C8 generation)', price: 34900, mileage: '32k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
@@ -71,27 +66,4 @@ export class Body implements AfterViewInit {
     }
   ];
 
-  ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    this.revealCards.forEach((card, index) => {
-      gsap.from(card.nativeElement, {
-        opacity: 0,
-        y: 80,
-        scale: 0.96,
-        duration: 0.9,
-        delay: index * 0.08,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: card.nativeElement,
-          start: 'top 90%',
-          toggleActions: 'play none none reverse'
-        }
-      });
-    });
-  }
 }
