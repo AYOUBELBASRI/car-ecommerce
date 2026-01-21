@@ -14,6 +14,7 @@ import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
 import { Intro } from './intro/intro';
+import { introRefreshGuard } from './intro/intro-refresh.guard';
 
 export const routes: Routes = [
   {
@@ -27,58 +28,72 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: Home
+    component: Home,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'cars',
-    component: CarsListing
+    component: CarsListing,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'signin',
-    component: SignIn
+    component: SignIn,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'signin-success',
-    component: SigninSuccess
+    component: SigninSuccess,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'signup',
-    component: SignUp
+    component: SignUp,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'used-cars',
-    component: UsedCars
+    component: UsedCars,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'new-cars',
-    component: NewCars
+    component: NewCars,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'sell-car',
-    component: SellCar
+    component: SellCar,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'financing',
-    component: Financing
+    component: Financing,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'financing-result',
-    component: FinancingResult
+    component: FinancingResult,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'reviews',
-    component: Reviews
+    component: Reviews,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'how-it-works',
-    component: HowItWorks
+    component: HowItWorks,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'car/:id',
-    component: CarDetails
+    component: CarDetails,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'contact-seller',
-    component: User
+    component: User,
+    canActivate: [introRefreshGuard]
   }
 ];

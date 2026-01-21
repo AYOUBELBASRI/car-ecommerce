@@ -10,7 +10,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       @for (car of trendingCars; track car) {
-      <div #revealCard class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden group">
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden group">
         <div class="relative h-48 overflow-hidden">
           <img [src]="car.image"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-100">
@@ -42,7 +42,7 @@
       <h2 class="text-3xl font-bold mb-16">Why Choose AutoMarket?</h2>
       <div class="grid md:grid-cols-3 gap-12">
         @for (item of features; track item; let i = $index) {
-        <div #revealCard class="flex flex-col items-center">
+        <div class="flex flex-col items-center">
           <div
             class="w-14 h-14 bg-blue-900/30 rounded-xl border border-blue-500/30 flex items-center justify-center mb-6">
             @if (i === 0) {
@@ -69,7 +69,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         @for (t of testimonials; track t) {
-        <div #revealCard
+        <div
           class="bg-white p-10 rounded-3xl border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-100">
 
           <div class="text-blue-500 mb-6">
