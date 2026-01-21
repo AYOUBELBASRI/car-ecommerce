@@ -14,8 +14,8 @@ import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
 import { Intro } from './intro/intro';
-import { introRefreshGuard } from './intro/intro-refresh.guard';
 import { ContactSuccess } from './contact-success/contact-success';
+import { introRefreshGuard } from './intro/intro-refresh.guard';
 
 export const routes: Routes = [
   {

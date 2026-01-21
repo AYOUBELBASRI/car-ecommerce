@@ -28,6 +28,10 @@ interface Testimonial {
   styleUrl: './body.css',
 })
 export class Body {
+  onFavoriteToggle(car: Car): void {
+    console.log(`Toggled favorite for ${car.make} ${car.model}`);
+    // Implement actual favorite toggling logic here, e.g., update a service or local storage.
+  }
   trendingCars: Car[] = [
     { year: 2021, make: 'Audi', model: 'RS 7 Sportback (C8 generation)', price: 34900, mileage: '32k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
     { year: 2018, make: 'BMW', model: 'M3 (F80 generation)', price: 42500, mileage: '15k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },

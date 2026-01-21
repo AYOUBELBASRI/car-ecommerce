@@ -14,7 +14,8 @@
         <div class="relative h-48 overflow-hidden">
           <img [src]="car.image"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-100">
-          <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
+          <button (click)="onFavoriteToggle(car)" aria-label="Add to favorites"
+            class="absolute top-3 right-3 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
             <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -93,8 +94,11 @@
                 <span class="text-xs font-medium text-slate-400">{{t.role}}</span>
                 <div class="flex text-yellow-400 text-[10px]">
                   @for (star of [1,2,3,4,5]; track star) {
-                  <span>★</span>
-                  }
+                  @if (star <= t.rating) { <span>★</span>
+                    } @else {
+                    <span class="text-slate-300">★</span>
+                    }
+                    }
                 </div>
               </div>
             </div>
