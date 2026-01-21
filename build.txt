@@ -1,0 +1,307 @@
+﻿
+> my-cars@0.0.0 build
+> ng build --configuration development --no-progress --verbose
+
+node.exe : 
+Au caractère Ligne:1 : 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Users\usern\AppData\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  polyfills.server.mjs      417.7kb
+  polyfills.server.mjs.map  893.0kb
+
+Done in 2338ms
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/app.routes.ts:17:0:
+      17 Ôöé <<<<<<< HEAD
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/app.routes.ts:20:0:
+      20 Ôöé =======
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/app.routes.ts:23:0:
+      23 Ôöé >>>>>>> 510de5e1cd7426831331044decb3c737897e9717
+         ÔòÁ ~~~~~~~
+
+X [ERROR] NG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, you should use the "&#125;" HTML 
+entity instead. [plugin angular-compiler]
+
+    src/app/body/body.html:40:6:
+      40 Ôöé       }
+         ÔòÁ       ^
+
+  Error occurs in the template of component Body.
+
+    src/app/body/body.ts:27:15:
+      27 Ôöé   templateUrl: './body.html',
+         ÔòÁ                ~~~~~~~~~~~~~
+
+X [ERROR] NG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, you should use the "&#125;" HTML 
+entity instead. [plugin angular-compiler]
+
+    src/app/body/body.html:67:8:
+      67 Ôöé         }
+         ÔòÁ         ^
+
+  Error occurs in the template of component Body.
+
+    src/app/body/body.ts:27:15:
+      27 Ôöé   templateUrl: './body.html',
+         ÔòÁ                ~~~~~~~~~~~~~
+
+X [ERROR] NG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, you should use the "&#125;" HTML 
+entity instead. [plugin angular-compiler]
+
+    src/app/body/body.html:120:8:
+      120 Ôöé         }
+          ÔòÁ         ^
+
+  Error occurs in the template of component Body.
+
+    src/app/body/body.ts:27:15:
+      27 Ôöé   templateUrl: './body.html',
+         ÔòÁ                ~~~~~~~~~~~~~
+
+Ôû▓ [WARNING] NG8113: All imports are unused [plugin angular-compiler]
+
+    src/app/body/body.ts:26:2:
+      26 Ôöé   imports: [DecimalPipe, RouterLink],
+         ÔòÁ   ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/body/body.ts:30:0:
+      30 Ôöé <<<<<<< HEAD
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/body/body.ts:32:0:
+      32 Ôöé =======
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/body/body.ts:42:0:
+      42 Ôöé >>>>>>> 510de5e1cd7426831331044decb3c737897e9717
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/body/body.ts:79:0:
+      79 Ôöé <<<<<<< HEAD
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/body/body.ts:80:0:
+      80 Ôöé =======
+         ÔòÁ ~~~~~~~
+
+X [ERROR] TS1185: Merge conflict marker encountered. [plugin angular-compiler]
+
+    src/app/body/body.ts:113:0:
+      113 Ôöé >>>>>>> 510de5e1cd7426831331044decb3c737897e9717
+          ÔòÁ ~~~~~~~
+
+ÔùÅ [DEBUG] This call to "require" will not be bundled because the argument is not a string literal [unsupported-require-call]
+
+    node_modules/express/lib/view.js:81:13:
+      81 Ôöé     var fn = require(mod).__express
+         ÔòÁ              ~~~~~~~
+
+1 warning and 12 errors
+ÔùÅ [DEBUG] Resolving import "supports-color" in directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\debug\\src" of type "require-call"
+
+  Checking for package alias matches
+    Failed to find any package alias matches
+  Checking "supports-color" against the external pattern "*/main.server.mjs"
+  Read 4 entries for directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\debug\\src"
+  Searching for "supports-color" in "node_modules" directories starting from "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\debug\\src"
+    Parsed package name "supports-color" and package subpath "."
+    Checking for a package in the directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\supports-color"
+    Read 351 entries for directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules"
+    Failed to read directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\supports-color": open 
+C:\Users\usern\Desktop\car-ecommerce\node_modules\supports-color: The system cannot find the file specified.
+    Failed to read directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\supports-color"
+    Attempting to load "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\supports-color" as a file
+      Checking for file "supports-color"
+      Checking for file "supports-color.mjs"
+      Checking for file "supports-color.js"
+      Checking for file "supports-color.cjs"
+      Checking for file "supports-color.ts"
+      Checking for file "supports-color.tsx"
+      Failed to find file "supports-color"
+    Attempting to load "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\supports-color" as a directory
+      Failed to read directory "C:\\Users\\usern\\Desktop\\car-ecommerce\\node_modules\\supports-color"
+    Checking for a package in the directory "C:\\Users\\usern\\node_modules\\supports-color"
+    Read 65 entries for directory "C:\\Users\\usern"
+    Read 229 entries for directory "C:\\Users\\usern\\node_modules"
+    Failed to read directory "C:\\Users\\usern\\node_modules\\supports-color": open C:\Users\usern\node_modules\supports-color: The system cannot find the file 
+specified.
+    Failed to read directory "C:\\Users\\usern\\node_modules\\supports-color"
+    Attempting to load "C:\\Users\\usern\\node_modules\\supports-color" as a file
+      Checking for file "supports-color"
+      Checking for file "supports-color.mjs"
+      Checking for file "supports-color.js"
+      Checking for file "supports-color.cjs"
+      Checking for file "supports-color.ts"
+      Checking for file "supports-color.tsx"
+      Failed to find file "supports-color"
+    Attempting to load "C:\\Users\\usern\\node_modules\\supports-color" as a directory
+      Failed to read directory "C:\\Users\\usern\\node_modules\\supports-color"
+
+ÔùÅ [DEBUG] Importing "supports-color" was allowed even though it could not be resolved because dynamic import failures appear to be handled here: 
+[ignored-dynamic-import]
+
+    node_modules/debug/src/node.js:32:31:
+      32 Ôöé   const supportsColor = require('supports-color');
+         ÔòÁ                                 ~~~~~~~~~~~~~~~~
+
+  The handler for dynamic import failures is here:
+
+    node_modules/debug/src/node.js:114:2:
+      114 Ôöé } catch (error) {
+          ÔòÁ   ~~~~~
+
+
+  server.mjs               1.9mb
+  chunk-F5FD6IK3.mjs      39.2kb
+  chunk-3II4UTYF.mjs       2.7kb
+  server.mjs.map           3.1mb
+  chunk-F5FD6IK3.mjs.map  60.5kb
+  ...and 1 more output file...
+
+Done in 11233ms
+
+  main.server.mjs          2.4mb
+  chunk-5QAFQH3E.mjs      39.1kb
+  chunk-T2KOBY73.mjs       2.0kb
+  main.server.mjs.map      4.3mb
+  chunk-5QAFQH3E.mjs.map  60.5kb
+  ...and 1 more output file...
+
+Done in 11218ms
+[35mPrerendered 0 static routes.[39m
+Application bundle generation failed. [12.331 seconds] - 2026-01-21T12:37:47.498Z
+
+[1m[33m[33mÔû▓ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: All imports are unused[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:26:2:
+[37m      26 Ôöé   [32mimports[37m: [DecimalPipe, RouterLink],
+         ÔòÁ   [32m~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.routes.ts:17:0:
+[37m      17 Ôöé [32m<<<<<<<[37m HEAD
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.routes.ts:20:0:
+[37m      20 Ôöé [32m=======[37m
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.routes.ts:23:0:
+[37m      23 Ôöé [32m>>>>>>>[37m 510de5e1cd7426831331044decb3c737897e9717
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, 
+you should use the "&#125;" HTML entity instead.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.html:40:6:
+[37m      40 Ôöé       [32m}[37m
+         ÔòÁ       [32m^[0m
+
+  Error occurs in the template of component Body.
+
+    src/app/body/body.ts:27:15:
+[37m      27 Ôöé   templateUrl: [32m'./body.html'[37m,
+         ÔòÁ                [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, 
+you should use the "&#125;" HTML entity instead.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.html:67:8:
+[37m      67 Ôöé         [32m}[37m
+         ÔòÁ         [32m^[0m
+
+  Error occurs in the template of component Body.
+
+    src/app/body/body.ts:27:15:
+[37m      27 Ôöé   templateUrl: [32m'./body.html'[37m,
+         ÔòÁ                [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, 
+you should use the "&#125;" HTML entity instead.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.html:120:8:
+[37m      120 Ôöé         [32m}[37m
+          ÔòÁ         [32m^[0m
+
+  Error occurs in the template of component Body.
+
+    src/app/body/body.ts:27:15:
+[37m      27 Ôöé   templateUrl: [32m'./body.html'[37m,
+         ÔòÁ                [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:30:0:
+[37m      30 Ôöé [32m<<<<<<<[37m HEAD
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:32:0:
+[37m      32 Ôöé [32m=======[37m
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:42:0:
+[37m      42 Ôöé [32m>>>>>>>[37m 510de5e1cd7426831331044decb3c737897e9717
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:79:0:
+[37m      79 Ôöé [32m<<<<<<<[37m HEAD
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:80:0:
+[37m      80 Ôöé [32m=======[37m
+         ÔòÁ [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1185: Merge conflict marker encountered.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/body/body.ts:113:0:
+[37m      113 Ôöé [32m>>>>>>>[37m 510de5e1cd7426831331044decb3c737897e9717
+          ÔòÁ [32m~~~~~~~[0m
+
+[39m[22m
