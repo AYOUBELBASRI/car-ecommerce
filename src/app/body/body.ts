@@ -1,8 +1,6 @@
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject, PLATFORM_ID } from '@angular/core';
 import { DecimalPipe, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 interface Car {
   year: number;
@@ -31,7 +29,6 @@ interface Testimonial {
 })
 export class Body implements AfterViewInit {
   @ViewChildren('revealCard') revealCards!: QueryList<ElementRef>;
-
   private readonly platformId = inject(PLATFORM_ID);
 
   trendingCars: Car[] = [
@@ -76,22 +73,30 @@ export class Body implements AfterViewInit {
       return;
     }
 
-    gsap.registerPlugin(ScrollTrigger);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const delay = parseInt(entry.target.getAttribute('data-animation-delay') || '0');
+            setTimeout(() => {
+              entry.target.classList.add('animate');
+            }, delay);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
 
-    this.revealCards.forEach((card, index) => {
-      gsap.from(card.nativeElement, {
-        opacity: 0,
-        y: 80,
-        scale: 0.96,
-        duration: 0.9,
-        delay: index * 0.08,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: card.nativeElement,
-          start: 'top 90%',
-          toggleActions: 'play none none reverse'
-        }
+    // Start observing cards after a small delay to ensure DOM is ready
+    setTimeout(() => {
+      this.revealCards.forEach((card, index) => {
+        card.nativeElement.setAttribute('data-animation-delay', (index * 80).toString());
+        observer.observe(card.nativeElement);
       });
-    });
+    }, 100);
   }
+
 }
