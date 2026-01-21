@@ -99,7 +99,7 @@ export const routes: Routes = [
   },
   {
     path: 'contact-success',
-    component: ContactSuccess,
-    canActivate: [introRefreshGuard]
+    component: ContactSuccess
+>>>>>>>>> Temporary merge branch 2
   }
 ];
