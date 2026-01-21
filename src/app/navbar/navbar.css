@@ -9,5 +9,5 @@
 }
 
 .animate-spin-slow {
-  animation: spin-slow 1ms linear infinite;
+  animation: spin-slow 1ms  linear infinite;
 }
