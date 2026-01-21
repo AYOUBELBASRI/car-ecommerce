@@ -1,6 +1,8 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject, PLATFORM_ID } from '@angular/core';
-import { DecimalPipe, isPlatformBrowser } from '@angular/common';
+import { Component, AfterViewInit, ViewChildren, ElementRef, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { QueryList } from '@angular/core';
 
 interface Car {
   year: number;
@@ -103,5 +105,4 @@ export class Body implements AfterViewInit {
       });
     }, 100);
   }
-
 }
