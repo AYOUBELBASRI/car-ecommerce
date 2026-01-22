@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject, PLATFORM_ID } from '@angular/core';
 import { DecimalPipe, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { QueryList } from '@angular/core';
+
 
 interface Car {
   year: number;
