@@ -10,7 +10,7 @@
           to buy, sell, and finance their next car.
         </p>
       </div>
-      <a routerLink="/" class="text-blue-600 hover:text-blue-700 font-medium">← Back to home</a>
+      <a routerLink="/home" class="text-blue-600 hover:text-blue-700 font-medium">← Back to home</a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -19,7 +19,7 @@
         <p class="text-sm text-slate-500 mt-1">Average rating</p>
         <div class="flex items-center text-yellow-400 text-sm mt-2">
           @for (star of [1,2,3,4,5]; track star) {
-            <span>★</span>
+          <span>★</span>
           }
         </div>
       </div>
@@ -37,7 +37,8 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for (t of testimonials; track t.name) {
-      <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_40px_-18px_rgba(0,0,0,0.1)] hover:shadow-lg transition-all duration-300">
+      <article
+        class="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_10px_40px_-18px_rgba(0,0,0,0.1)] hover:shadow-lg transition-all duration-300">
         <div class="flex items-center justify-between mb-6">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full overflow-hidden bg-slate-100 border border-slate-200">
@@ -50,7 +51,7 @@
           </div>
           <div class="flex items-center text-yellow-400 text-xs font-semibold gap-1">
             @for (star of [1,2,3,4,5]; track star) {
-              <span [class.text-slate-300]="star > t.rating">★</span>
+            <span [class.text-slate-300]="star > t.rating">★</span>
             }
           </div>
         </div>

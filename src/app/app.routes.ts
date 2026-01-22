@@ -13,11 +13,24 @@ import { HowItWorks } from './how-it-works/how-it-works';
 import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
+<<<<<<< HEAD
 import { ContactSellerSuccess } from './contact-seller-success/contact-seller-success';
+=======
+import { Intro } from './intro/intro';
+>>>>>>> 3736e26c614cb0144f37efc371ce13d7b445a102
 
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'intro',
+    pathMatch: 'full'
+  },
+  {
+    path: 'intro',
+    component: Intro
+  },
+  {
+    path: 'home',
     component: Home
   },
   {

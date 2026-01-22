@@ -1,31 +1,16 @@
-<header class="bg-slate-50 px-6 lg:px-16 py-6">
+<header class="bg-slate-50">
 
-    <!-- NAVBAR -->
-    <nav class="flex items-center justify-between">
-      <!-- Logo -->
-      <a routerLink="/" class="flex items-center gap-2 text-xl font-bold cursor-pointer">
-         <span>LuxeWheels </span>
-      </a>
+  <app-navbar></app-navbar>
 
-      <!-- Links -->
-      <ul class="hidden lg:flex gap-8 text-slate-600">
-        <li><a routerLink="/used-cars" class="cursor-pointer hover:text-black">Used Cars</a></li>
-        <li><a routerLink="/new-cars" class="cursor-pointer hover:text-black">New Cars</a></li>
-        <li><a routerLink="/sell-car" class="cursor-pointer hover:text-black">Sell Your Car</a></li>
-        <li><a routerLink="/financing" class="cursor-pointer hover:text-black">Financing</a></li>
-        <li><a routerLink="/reviews" class="cursor-pointer hover:text-black">Reviews</a></li>
-      </ul>
+  <div class="pt-24 px-6 lg:px-16 py-6">
 
-      <!-- Actions -->
-      <div class="flex items-center gap-4">
-        <button routerLink="/signin" class="cursor-pointer text-slate-600 hover:text-black">
-          Sign In
-        </button>
-        <button routerLink="/signup" class="cursor-pointer bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
-          Get Started
-        </button>
+    <!-- VIDEO SECTION -->
+    <section class="mt-8 w-full">
+      <div class="w-full rounded-2xl overflow-hidden shadow-lg flex justify-center">
+        <a data-pin-do="embedPin" data-pin-width="large" href="https://pin.it/7mhXqO7T4">
+        </a>
       </div>
-    </nav>
+    </section>
 
     <!-- HERO SECTION -->
     <section class="mt-16 flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -34,7 +19,7 @@
       <div class="max-w-xl">
         <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
           Find the Car <br />
-          You Deserve ahmed
+          You Deserve
         </h1>
 
         <p class="text-slate-600 mt-4">
@@ -43,14 +28,12 @@
         </p>
 
         <div class="mt-6 flex gap-4">
-          <button
-            routerLink="/cars"
+          <button routerLink="/cars"
             class="cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
             Browse Inventory
           </button>
 
-          <button
-            routerLink="/how-it-works"
+          <button routerLink="/how-it-works"
             class="cursor-pointer border border-slate-300 px-6 py-3 rounded-lg hover:bg-slate-100">
             How it Works
           </button>
@@ -59,68 +42,61 @@
 
       <!-- Image -->
       <div class="w-full lg:w-[500px]">
-        <img
-          [src]="heroImage"
-          alt="Tesla Car"
-          class="rounded-2xl shadow-lg w-full object-cover"
-        />
+        <img [src]="heroImage" alt="Tesla Car" class="rounded-2xl shadow-lg w-full object-cover" />
       </div>
 
     </section>
     <!-- SEARCH BAR -->
-<section
-class="cursor-pointer relative z-10 -mt-z bg-white rounded-2xl shadow-lg px-6 py-6
+    <section class="cursor-pointer relative z-10 -mt-z bg-white rounded-2xl shadow-lg px-6 py-6
        flex flex-col lg:flex-row items-center gap-6 mt-10">
 
-<!-- Condition -->
-<div class="cursor-pointer flex flex-col w-full lg:w-1/5">
-  <span class="text-xs text-slate-500 uppercase">Condition</span>
-  <select class="mt-1 font-medium outline-none">
-    @for (c of conditions; track c) {
-      <option>{{ c }}</option>
-    }
-  </select>
-</div>
+      <!-- Condition -->
+      <div class="cursor-pointer flex flex-col w-full lg:w-1/5">
+        <span class="text-xs text-slate-500 uppercase">Condition</span>
+        <select class="mt-1 font-medium outline-none">
+          @for (c of conditions; track c) {
+          <option>{{ c }}</option>
+          }
+        </select>
+      </div>
 
-<!-- Make -->
-<div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6 ">
-  <span class="text-xs text-slate-500 uppercase">Make</span>
-  <select class="mt-1 font-medium outline-none">
-    @for (m of makes; track m) {
-      <option>{{ m }}</option>
-    }
-  </select>
-</div>
+      <!-- Make -->
+      <div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6 ">
+        <span class="text-xs text-slate-500 uppercase">Make</span>
+        <select class="mt-1 font-medium outline-none">
+          @for (m of makes; track m) {
+          <option>{{ m }}</option>
+          }
+        </select>
+      </div>
 
-<!-- Model -->
-<div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6">
-  <span class="text-xs text-slate-500 uppercase">Model</span>
-  <select class="mt-1 font-medium outline-none">
-    @for (m of models; track m) {
-      <option>{{ m }}</option>
-    }
-  </select>
-</div>
+      <!-- Model -->
+      <div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6">
+        <span class="text-xs text-slate-500 uppercase">Model</span>
+        <select class="mt-1 font-medium outline-none">
+          @for (m of models; track m) {
+          <option>{{ m }}</option>
+          }
+        </select>
+      </div>
 
-<!-- Price -->
-<div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6">
-  <span class="text-xs text-slate-500 uppercase">Price Range</span>
-  <select class="mt-1 font-medium outline-none">
-    @for (p of priceRanges; track p) {
-      <option>{{ p }}</option>
-    }
-  </select>
-</div>
+      <!-- Price -->
+      <div class="cursor-pointer flex flex-col w-full lg:w-1/5 border-l lg:pl-6">
+        <span class="text-xs text-slate-500 uppercase">Price Range</span>
+        <select class="mt-1 font-medium outline-none">
+          @for (p of priceRanges; track p) {
+          <option>{{ p }}</option>
+          }
+        </select>
+      </div>
 
-<!-- Button -->
-<button
-  routerLink="/cars"
-  class="cursor-pointer w-full lg:w-auto bg-slate-900 text-white px-8 py-4 rounded-xl
+      <!-- Button -->
+      <button routerLink="/cars" class="cursor-pointer w-full lg:w-auto bg-slate-900 text-white px-8 py-4 rounded-xl
          hover:bg-slate-800 transition font-medium">
-  Search 12,403 Cars
-</button>
+        Search 12,403 Cars
+      </button>
 
-</section>
+    </section>
 
 
     <!-- BRANDS -->
@@ -129,20 +105,12 @@ class="cursor-pointer relative z-10 -mt-z bg-white rounded-2xl shadow-lg px-6 py
         <div class="brand-marquee-wrapper">
           <div class="brand-marquee-content">
             @for (icon of brandIcons; track $index) {
-              <img
-                [src]="icon"
-                alt="Brand"
-                class="h-8 grayscale hover:grayscale-0 transition mx-8"
-              />
+            <img [src]="icon" alt="Brand" class="h-8 grayscale hover:grayscale-0 transition mx-8" />
             }
           </div>
           <div class="brand-marquee-content" aria-hidden="true">
             @for (icon of brandIcons; track $index) {
-              <img
-                [src]="icon"
-                alt="Brand"
-                class="h-8 grayscale hover:grayscale-0 transition mx-8"
-              />
+            <img [src]="icon" alt="Brand" class="h-8 grayscale hover:grayscale-0 transition mx-8" />
             }
           </div>
         </div>
@@ -151,5 +119,5 @@ class="cursor-pointer relative z-10 -mt-z bg-white rounded-2xl shadow-lg px-6 py
 
 
 
-  </header>
-
+  </div>
+</header>
