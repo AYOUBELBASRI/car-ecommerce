@@ -100,6 +100,7 @@ export const routes: Routes = [
   {
     path: 'contact-success',
     component: ContactSuccess,
-    
+    canActivate: [introRefreshGuard]
+ 
   }
 ];

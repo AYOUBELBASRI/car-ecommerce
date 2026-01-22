@@ -1,26 +1,22 @@
 .bg-dark-navy {
-    background-color: #0d121f; /* Adjust based on your eye-drop preference */
-  }
-  
-  /* Smooth transitions for the cards */
-  .group:hover {
-    transform: translateY(-4px);
-    transition: transform 0.075s ease-in-out;
-  }
+  background-color: #0d121f;
+  /* Adjust based on your eye-drop preference */
+}
 
-  /* Blue filter for security image */
-  .security-blue {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(198deg) brightness(104%) contrast(97%);
-  }
+/* Smooth transitions for the cards */
+.group:hover {
+  transform: translateY(-4px);
+  transition: transform 0.075s ease-in-out;
+}
 
-  /* Reveal animations to replace GSAP */
-  .reveal-card {
-    opacity: 0;
-    transform: translateY(80px) scale(0.96);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
+/* Reveal animations to replace GSAP */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(80px) scale(0.96);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-  .reveal-card.animate {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.reveal-card.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

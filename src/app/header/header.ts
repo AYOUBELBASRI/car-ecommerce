@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, PLATFORM_ID, ViewChild, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Navbar } from '../navbar/navbar';
 
@@ -9,6 +10,9 @@ import { Navbar } from '../navbar/navbar';
   styleUrl: './header.css',
 })
 export class Header {
+  @ViewChild('heroBgVideo') heroBgVideo?: ElementRef<HTMLVideoElement>;
+  private readonly platformId = inject(PLATFORM_ID);
+
   heroImage = 'assets/teslahero.jpg';
 
   brandIcons = [
@@ -32,6 +36,33 @@ export class Header {
   makes = ['Any Make', 'Toyota', 'Ford', 'BMW', 'Mercedes'];
   models = ['Any Model'];
   priceRanges = ['$5,000 - $50,000', '$4,000 - $6,000'];
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const el = this.heroBgVideo?.nativeElement;
+    if (!el) {
+      return;
+    }
+
+    const forceMuted = () => {
+      el.muted = true;
+      el.defaultMuted = true;
+      el.volume = 0;
+    };
+
+    forceMuted();
+    el.addEventListener('volumechange', forceMuted);
+
+    const p = el.play();
+    if (p) {
+      p.catch(() => {
+        forceMuted();
+      });
+    }
+  }
 
 
 }
