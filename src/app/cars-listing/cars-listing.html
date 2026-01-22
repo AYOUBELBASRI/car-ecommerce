@@ -28,7 +28,7 @@
             <span>{{ car.fuel }}</span>
             <span>{{ car.drive }}</span>
           </div>
-          <button [routerLink]="['/car', $index + 1]"
+          <button [routerLink]="['/car', car.id]"
             class="w-full mt-4 bg-[#343a40] text-white py-2 rounded-lg hover:bg-[#495057] transition">
             View Details
           </button>

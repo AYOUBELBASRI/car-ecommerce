@@ -3,8 +3,6 @@ import { CarsListing } from './cars-listing/cars-listing';
 import { Home } from './home/home';
 import { SignIn } from './signin/signin';
 import { SignUp } from './signup/signup';
-import { UsedCars } from './used-cars/used-cars';
-import { NewCars } from './new-cars/new-cars';
 import { SellCar } from './sell-car/sell-car';
 import { Financing } from './financing/financing';
 import { FinancingResult } from './financing-result/financing-result';
@@ -53,16 +51,6 @@ export const routes: Routes = [
     canActivate: [introRefreshGuard]
   },
   {
-    path: 'used-cars',
-    component: UsedCars,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'new-cars',
-    component: NewCars,
-    canActivate: [introRefreshGuard]
-  },
-  {
     path: 'sell-car',
     component: SellCar,
     canActivate: [introRefreshGuard]
@@ -101,6 +89,6 @@ export const routes: Routes = [
     path: 'contact-success',
     component: ContactSuccess,
     canActivate: [introRefreshGuard]
- 
+
   }
 ];
