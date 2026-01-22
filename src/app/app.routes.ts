@@ -99,6 +99,7 @@ export const routes: Routes = [
   },
   {
     path: 'contact-success',
-    component: ContactSuccess
+    component: ContactSuccess,
+    canActivate: [introRefreshGuard]
   }
 ];
