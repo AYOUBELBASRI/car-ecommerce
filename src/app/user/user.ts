@@ -1,29 +1,52 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-user',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
 export class User {
-  name = '';
-  email = '';
-  message = '';
-  errorMessage = '';
+  contactForm: ContactForm = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
+  isSubmitting = false;
 
   constructor(private router: Router) {}
 
-  sendMessage() {
-    this.errorMessage = '';
-
-    if (!this.name || !this.email || !this.message) {
-      this.errorMessage = 'Please fill in your name, email, and message before sending.';
+  onSendMessage(): void {
+    if (!this.isFormValid()) {
       return;
     }
 
-    this.router.navigate(['/contact-seller-success']);
+    this.isSubmitting = true;
+
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Message sent:', this.contactForm);
+      this.isSubmitting = false;
+      this.router.navigate(['/contact-success']);
+    }, 1000);
+  }
+
+  isFormValid(): boolean {
+    return (
+      this.contactForm.name.trim().length > 0 &&
+      this.contactForm.email.trim().length > 0 &&
+      this.contactForm.email.includes('@') &&
+      this.contactForm.message.trim().length > 0
+    );
   }
 }

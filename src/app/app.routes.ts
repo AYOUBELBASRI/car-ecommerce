@@ -13,11 +13,9 @@ import { HowItWorks } from './how-it-works/how-it-works';
 import { CarDetails } from './car-details/car-details';
 import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
-<<<<<<< HEAD
-import { ContactSellerSuccess } from './contact-seller-success/contact-seller-success';
-=======
 import { Intro } from './intro/intro';
->>>>>>> 3736e26c614cb0144f37efc371ce13d7b445a102
+import { ContactSuccess } from './contact-success/contact-success';
+import { introRefreshGuard } from './intro/intro-refresh.guard';
 
 export const routes: Routes = [
   {
@@ -31,62 +29,77 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: Home
+    component: Home,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'cars',
-    component: CarsListing
+    component: CarsListing,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'signin',
-    component: SignIn
+    component: SignIn,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'signin-success',
-    component: SigninSuccess
+    component: SigninSuccess,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'signup',
-    component: SignUp
+    component: SignUp,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'used-cars',
-    component: UsedCars
+    component: UsedCars,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'new-cars',
-    component: NewCars
+    component: NewCars,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'sell-car',
-    component: SellCar
+    component: SellCar,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'financing',
-    component: Financing
+    component: Financing,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'financing-result',
-    component: FinancingResult
+    component: FinancingResult,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'reviews',
-    component: Reviews
+    component: Reviews,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'how-it-works',
-    component: HowItWorks
+    component: HowItWorks,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'car/:id',
-    component: CarDetails
+    component: CarDetails,
+    canActivate: [introRefreshGuard]
   },
   {
     path: 'contact-seller',
-    component: User
+    component: User,
+    canActivate: [introRefreshGuard]
   },
   {
-    path: 'contact-seller-success',
-    component: ContactSellerSuccess
+    path: 'contact-success',
+    component: ContactSuccess,
+    canActivate: [introRefreshGuard]
   }
 ];
