@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject, PLATFORM_ID } from '@angular/core';
-import { DecimalPipe, isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 interface Car {
@@ -27,10 +27,7 @@ interface Testimonial {
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
-export class Body implements AfterViewInit {
-  @ViewChildren('revealCard') revealCards!: QueryList<ElementRef>;
-  private readonly platformId = inject(PLATFORM_ID);
-
+export class Body {
   onFavoriteToggle(car: Car): void {
     console.log(`Toggled favorite for ${car.make} ${car.model}`);
     // Implement actual favorite toggling logic here, e.g., update a service or local storage.
@@ -71,35 +68,4 @@ export class Body implements AfterViewInit {
       avatar: 'assets/jessica.jpg'
     }
   ];
-
-  ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const delay = parseInt(entry.target.getAttribute('data-animation-delay') || '0');
-            setTimeout(() => {
-              entry.target.classList.add('animate');
-            }, delay);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
-    );
-
-    // Start observing cards after a small delay to ensure DOM is ready
-    setTimeout(() => {
-      this.revealCards.forEach((card, index) => {
-        card.nativeElement.setAttribute('data-animation-delay', (index * 80).toString());
-        observer.observe(card.nativeElement);
-      });
-    }, 100);
-  }
 }
