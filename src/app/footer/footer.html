@@ -1,12 +1,12 @@
 <footer>
-  <section class="bg-[#1e40af] py-12 px-6">
+  <section class="bg-[#343a40] py-12 px-6">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-white">
         <h2 class="text-3xl font-bold mb-2">Ready to find your next ride?</h2>
-        <p class="text-blue-100 text-lg">Get pre-qualified for financing in minutes. No commitment required.</p>
+        <p class="text-white/80 text-lg">Get pre-qualified for financing in minutes. No commitment required.</p>
       </div>
       <button routerLink="/financing"
-        class="cursor-pointer bg-white text-slate-900 font-bold py-4 px-8 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+        class="cursor-pointer bg-white text-slate-900 font-bold py-4 px-8 rounded-xl hover:bg-slate-100 transition-colors shadow-lg">
         Get Pre-Qualified
       </button>
     </div>
@@ -30,7 +30,7 @@
           <div class="flex gap-4">
             @for (social of socialIcons; track social) {
             <a href="#"
-              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#495057] transition-colors">
               <i [class]="social.icon"></i>
             </a>
             }

@@ -1,28 +1,55 @@
-<hr class="border-black h-2">
-<nav
-    class="fixed top-0 inset-x-0 z-50 bg-slate-50/20 backdrop-blur px-6 lg:px-16 py-6 flex items-center justify-between border-b border-black">
+<nav class="fixed top-0 inset-x-0 z-50 px-6 lg:px-16 py-6 flex items-center justify-between transition-colors duration-300"
+    [ngClass]="{
+        'bg-transparent': !isScrolled,
+        'bg-white/80 backdrop-blur-md border-b border-slate-200': isScrolled
+    }">
     <!-- Logo -->
-    <a routerLink="/home" class="flex items-center gap-2 text-xl font-bold cursor-pointer">
-        <video src="assets/wheel.mp4" autoplay loop muted playsinline class="h-12 w-12 rounded-full animate-spin-slow"></video>
+    <a routerLink="/home" class="flex items-center gap-2 text-xl font-bold cursor-pointer" [ngClass]="{
+        'text-white': !isScrolled,
+        'text-slate-900': isScrolled
+    }">
+        <video src="assets/wheel.mp4" autoplay loop muted playsinline
+            class="h-12 w-12 rounded-full animate-spin-slow"></video>
         <span>LuxeWheels </span>
     </a>
 
     <!-- Links -->
-    <ul class="hidden lg:flex gap-8 text-slate-600" color="font-white font-bold">
-        <li><a routerLink="/used-cars" class="cursor-pointer hover:text-black">Used Cars</a></li>
-        <li><a routerLink="/new-cars" class="cursor-pointer hover:text-black">New Cars</a></li>
-        <li><a routerLink="/sell-car" class="cursor-pointer hover:text-black">Sell Your Car</a></li>
-        <li><a routerLink="/financing" class="cursor-pointer hover:text-black">Financing</a></li>
-        <li><a routerLink="/reviews" class="cursor-pointer hover:text-black">Reviews</a></li>
+    <ul class="hidden lg:flex gap-8 font-semibold" [ngClass]="{
+        'text-white/90': !isScrolled,
+        'text-slate-700': isScrolled
+    }">
+        <li><a routerLink="/used-cars" class="cursor-pointer" [ngClass]="{
+            'hover:text-white': !isScrolled,
+            'hover:text-slate-900': isScrolled
+        }">Used Cars</a></li>
+        <li><a routerLink="/new-cars" class="cursor-pointer" [ngClass]="{
+            'hover:text-white': !isScrolled,
+            'hover:text-slate-900': isScrolled
+        }">New Cars</a></li>
+        <li><a routerLink="/sell-car" class="cursor-pointer" [ngClass]="{
+            'hover:text-white': !isScrolled,
+            'hover:text-slate-900': isScrolled
+        }">Sell Your Car</a></li>
+        <li><a routerLink="/financing" class="cursor-pointer" [ngClass]="{
+            'hover:text-white': !isScrolled,
+            'hover:text-slate-900': isScrolled
+        }">Financing</a></li>
+        <li><a routerLink="/reviews" class="cursor-pointer" [ngClass]="{
+            'hover:text-white': !isScrolled,
+            'hover:text-slate-900': isScrolled
+        }">Reviews</a></li>
     </ul>
 
     <!-- Actions -->
     <div class="flex items-center gap-4">
-        <button routerLink="/signin" class="cursor-pointer text-slate-600 hover:text-black">
+        <button routerLink="/signin" class="cursor-pointer font-semibold" [ngClass]="{
+            'text-white/90 hover:text-white': !isScrolled,
+            'text-slate-700 hover:text-slate-900': isScrolled
+        }">
             Sign In
         </button>
         <button routerLink="/signup"
-            class="cursor-pointer bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+            class="cursor-pointer bg-[#343a40] text-white px-5 py-2 rounded-lg hover:bg-[#495057]">
             Get Started
         </button>
     </div>
