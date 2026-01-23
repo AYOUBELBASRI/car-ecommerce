@@ -9,14 +9,18 @@
   transition: transform 0.075s ease-in-out;
 }
 
-/* Reveal animations to replace GSAP */
-.reveal-card {
-  opacity: 0;
-  transform: translateY(80px) scale(0.96);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Optimized reveal animations with hardware acceleration */
+.reveal-card,
+.feature-item,
+.testimonial-card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
-.reveal-card.animate {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+/* Clean up will-change after animations */
+.reveal-card.animated,
+.feature-item.animated,
+.testimonial-card.animated {
+  will-change: auto;
 }
