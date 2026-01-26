@@ -1,4 +1,3 @@
-<<<<<<<<< Temporary merge branch 1
 import { Component, AfterViewInit, ViewChildren, ElementRef, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
@@ -30,19 +29,10 @@ interface Testimonial {
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
-<<<<<<<<< Temporary merge branch 1
 export class Body implements AfterViewInit {
   @ViewChildren('revealCard') revealCards!: QueryList<ElementRef>;
   private readonly platformId = inject(PLATFORM_ID);
 
->>>>>>>>> Temporary merge branch 2
-=========
-export class Body {
-  onFavoriteToggle(car: Car): void {
-    console.log(`Toggled favorite for ${car.make} ${car.model}`);
-    // Implement actual favorite toggling logic here, e.g., update a service or local storage.
-  }
->>>>>>>>> Temporary merge branch 2
   trendingCars: Car[] = [
     { year: 2021, make: 'Audi', model: 'RS 7 Sportback (C8 generation)', price: 34900, mileage: '32k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
     { year: 2018, make: 'BMW', model: 'M3 (F80 generation)', price: 42500, mileage: '15k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
@@ -53,7 +43,7 @@ export class Body {
   features = [
     { title: '12-Month Warranty', desc: 'Every car comes with a standard warranty for your peace of mind.', icon: 'shield-check' },
     { title: 'Easy Financing', desc: 'Get pre-qualified in minutes with no impact on your credit score.', icon: 'wallet' },
-    { title: '7-Day Return Policy', desc: 'Love it or return it. If you’re not completely satisfied, bring it back.', icon: 'calendar' }
+    { title: '7-Day Return Policy', desc: 'Love it or return it. If you\'re not completely satisfied, bring it back.', icon: 'calendar' }
   ];
 
   testimonials: Testimonial[] = [
@@ -79,7 +69,11 @@ export class Body {
       avatar: 'assets/jessica.jpg'
     }
   ];
-<<<<<<<<< Temporary merge branch 1
+
+  onFavoriteToggle(car: Car): void {
+    console.log(`Toggled favorite for ${car.make} ${car.model}`);
+    // Implement actual favorite toggling logic here, e.g., update a service or local storage.
+  }
 
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {

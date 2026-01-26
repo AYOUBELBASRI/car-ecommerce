@@ -10,9 +10,6 @@
 }
 
 .animate-spin-slow {
-<<<<<<<<< Temporary merge branch 1
-  animation: spin-slow 1ms  linear infinite;
-=========
-  animation: spin-slow 600ms linear infinite;
->>>>>>>>> Temporary merge branch 2
+
+  animation: spin-slow 600ms  linear infinite;
 }
