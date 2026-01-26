@@ -13,6 +13,15 @@ import { User } from './user/user';
 import { SigninSuccess } from './signin-success/signin-success';
 import { Intro } from './intro/intro';
 import { ContactSuccess } from './contact-success/contact-success';
+import { AdminLoginComponent } from './admin/admin-login/admin-login';
+import { AdminDashboard } from './admin/admin-dashboard/admin-dashboard';
+import { AdminLayout } from './admin/admin-layout/admin-layout';
+import { AdminCustomersComponent } from './admin/admin-customers/admin-customers';
+import { AdminProductsComponent } from './admin/admin-products/admin-products';
+import { AdminOrdersComponent } from './admin/admin-orders/admin-orders';
+import { AdminMessagesComponent } from './admin/admin-messages/admin-messages';
+import { AdminSettingsComponent } from './admin/admin-settings/admin-settings';
+import { AdminAuthGuard } from './admin/admin-auth/admin-auth.guard';
 import { introRefreshGuard } from './intro/intro-refresh.guard';
 
 export const routes: Routes = [
@@ -71,6 +80,41 @@ export const routes: Routes = [
     canActivate: [introRefreshGuard]
   },
   {
+    path: 'admin',
+    component: AdminLoginComponent
+  },
+  {
+    path: 'admin-dashboard',
+    component: AdminLayout,
+    canActivate: [AdminAuthGuard],
+    children: [
+      {
+        path: '',
+        component: AdminDashboard
+      },
+      {
+        path: 'customers',
+        component: AdminCustomersComponent
+      },
+      {
+        path: 'products',
+        component: AdminProductsComponent
+      },
+      {
+        path: 'orders',
+        component: AdminOrdersComponent
+      },
+      {
+        path: 'messages',
+        component: AdminMessagesComponent
+      },
+      {
+        path: 'settings',
+        component: AdminSettingsComponent
+      }
+    ]
+  },
+  {
     path: 'how-it-works',
     component: HowItWorks,
     canActivate: [introRefreshGuard]
@@ -89,5 +133,6 @@ export const routes: Routes = [
     path: 'contact-success',
     component: ContactSuccess,
     canActivate: [introRefreshGuard]
+
   }
 ];

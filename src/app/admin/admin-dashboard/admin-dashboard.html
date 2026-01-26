@@ -1,0 +1,203 @@
+<div class="max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white rounded-lg shadow-md p-6 flex items-center justify-between" style="background-color: #ffebee;">
+      <div>
+        <p class="text-sm font-medium text-gray-600">Total sales</p>
+        <p class="text-3xl font-bold text-gray-900">$628,454.37</p>
+        <p class="text-sm mt-1">
+          <span class="text-green-500">43.7%</span>
+          <span class="text-gray-500">+15.8K this week</span>
+        </p>
+      </div>
+      <svg class="h-8 w-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V4m0 8v4m0-4c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+        </path>
+      </svg>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex items-center justify-between" style="background-color: #fff8e1;">
+      <div>
+        <p class="text-sm font-medium text-gray-600">Visitors</p>
+        <p class="text-3xl font-bold text-gray-900">450,234</p>
+        <p class="text-sm mt-1">
+          <span class="text-green-500">17%</span>
+          <span class="text-gray-500">+15.8K this week</span>
+        </p>
+      </div>
+      <svg class="h-8 w-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.198-1.272-.55-1.79M7 20v-2c0-.653.198-1.272.55-1.79M12 10a2 2 0 110-4 2 2 0 010 4zm-7 1.803V20H2v-2a3 3 0 015-2.2zM15 4a2 2 0 110-4 2 2 0 010 4z">
+        </path>
+      </svg>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex items-center justify-between" style="background-color: #e8f5e9;">
+      <div>
+        <p class="text-sm font-medium text-gray-600">Total Orders</p>
+        <p class="text-3xl font-bold text-gray-900">4,200.00</p>
+        <p class="text-sm mt-1">
+          <span class="text-green-500">30.34%</span>
+          <span class="text-gray-500">+15.8K this week</span>
+        </p>
+      </div>
+      <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+        </path>
+      </svg>
+    </div>
+    <div class="bg-white rounded-lg shadow-md p-6 flex items-center justify-between" style="background-color: #fce4ec;">
+      <div>
+        <p class="text-sm font-medium text-gray-600">Refunded</p>
+        <p class="text-3xl font-bold text-gray-900">761,375</p>
+        <p class="text-sm mt-1">
+          <span class="text-red-500">-10%</span>
+          <span class="text-gray-500">+15.8K this week</span>
+        </p>
+      </div>
+      <svg class="h-8 w-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M15 19l-7-7 7-7m-5 5l5 5m-5-5h8">
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <!-- Revenue vs Orders Chart -->
+    <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-medium text-gray-900">Revenue vs Orders</h3>
+        <div class="flex items-center space-x-2 text-sm text-gray-500">
+          <span>• Revenue</span>
+          <span>• Orders</span>
+        </div>
+      </div>
+      <div class="text-center mb-4">
+        <p class="text-2xl font-bold text-gray-900">220,342,123</p>
+        <p class="text-sm text-gray-500">This Month</p>
+      </div>
+      <div style="display: block; height: 200px;">
+        <canvas baseChart
+          [data]="revenueVsOrdersChartData"
+          [options]="revenueVsOrdersChartOptions"
+          [type]="revenueVsOrdersChartType">
+        </canvas>
+      </div>
+    </div>
+
+    <!-- Sale Category Donut Chart -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-medium text-gray-900">Sale Category</h3>
+        <a href="#" class="text-sm text-blue-600 hover:underline">See All</a>
+      </div>
+      <div class="relative flex items-center justify-center" style="height: 200px;">
+        <canvas baseChart
+          [data]="saleCategoryDonutChartData"
+          [options]="saleCategoryDonutChartOptions"
+          [type]="saleCategoryDonutChartType">
+        </canvas>
+        <div class="absolute text-center">
+          <p class="text-2xl font-bold text-gray-900">$124,213</p>
+          <p class="text-sm text-gray-500">Luxury Cars</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Top Cars -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-medium text-gray-900">Top Cars</h3>
+        <div class="flex items-center space-x-2">
+          <input type="text" placeholder="Search..."
+            class="px-3 py-1 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select
+            class="px-3 py-1 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>This week</option>
+            <option>This month</option>
+            <option>This year</option>
+          </select>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead>
+            <tr>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Car Model
+              </th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order ID</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+              <th class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Sold</th>
+              <th class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">Sales</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">2024 Tesla Model S</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">TSLA001</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">$79,990</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">15</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">$1,199,850</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">2023 BMW X5</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">BMWX5002</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">$65,000</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">10</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">$650,000</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">2022 Mercedes-Benz C-Class</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">MBCC003</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">$45,000</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">20</td>
+              <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">$900,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recent Sales -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-medium text-gray-900">Recent Sales</h3>
+        <a href="#" class="text-sm text-blue-600 hover:underline">See All</a>
+      </div>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="Ethan Williams">
+            <div>
+              <p class="text-sm font-medium text-gray-900">Ethan Williams</p>
+              <p class="text-xs text-gray-500">2 minutes ago</p>
+            </div>
+          </div>
+          <p class="text-green-600 font-medium">+$89.00</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="Liam Johnson">
+            <div>
+              <p class="text-sm font-medium text-gray-900">Liam Johnson</p>
+              <p class="text-xs text-gray-500">3 minutes ago</p>
+            </div>
+          </div>
+          <p class="text-green-600 font-medium">+$28.00</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="Isabella Rodriguez">
+            <div>
+              <p class="text-sm font-medium text-gray-900">Isabella Rodriguez</p>
+              <p class="text-xs text-gray-500">3 minutes ago</p>
+            </div>
+          </div>
+          <p class="text-red-600 font-medium">-$62.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

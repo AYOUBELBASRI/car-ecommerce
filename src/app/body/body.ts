@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 interface Car {
+  id: number;
   year: number;
   make: string;
   model: string;
@@ -34,21 +35,17 @@ export class Body implements AfterViewInit {
   @ViewChildren('revealCard') revealCards!: QueryList<ElementRef>;
   private readonly platformId = inject(PLATFORM_ID);
 
-  onFavoriteToggle(car: Car): void {
-    console.log(`Toggled favorite for ${car.make} ${car.model}`);
-    // Implement actual favorite toggling logic here, e.g., update a service or local storage.
-  }
   trendingCars: Car[] = [
-    { year: 2017, make: 'BMW', model: '3 Series', price: 21900, mileage: '54k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
-    { year: 2018, make: 'Audi', model: 'A4', price: 23900, mileage: '46k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
-    { year: 2019, make: 'Mercedes', model: 'C-Class', price: 27900, mileage: '38k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/merc.jpg' },
-    { year: 2016, make: 'Toyota', model: 'Camry', price: 17900, mileage: '72k miles', fuel: 'Gasoline', drive: 'FWD', image: 'assets/toyota.jpg' }
+    { id: 101, year: 2017, make: 'BMW', model: '3 Series', price: 21900, mileage: '54k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
+    { id: 102, year: 2018, make: 'Audi', model: 'A4', price: 23900, mileage: '46k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
+    { id: 103, year: 2019, make: 'Mercedes', model: 'C-Class', price: 27900, mileage: '38k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/merc.jpg' },
+    { id: 104, year: 2016, make: 'Toyota', model: 'Camry', price: 17900, mileage: '72k miles', fuel: 'Gasoline', drive: 'FWD', image: 'assets/toyota.jpg' }
   ];
 
   features = [
     { title: '12-Month Warranty', desc: 'Every car comes with a standard warranty for your peace of mind.', icon: 'shield-check' },
     { title: 'Easy Financing', desc: 'Get pre-qualified in minutes with no impact on your credit score.', icon: 'wallet' },
-    { title: '7-Day Return Policy', desc: 'Love it or return it. If you’re not completely satisfied, bring it back.', icon: 'calendar' }
+    { title: '7-Day Return Policy', desc: 'Love it or return it. If you\'re not completely satisfied, bring it back.', icon: 'calendar' }
   ];
 
   testimonials: Testimonial[] = [
@@ -74,6 +71,12 @@ export class Body implements AfterViewInit {
       avatar: 'assets/jessica.jpg'
     }
   ];
+
+  onFavoriteToggle(car: Car): void {
+    console.log(`Toggled favorite for ${car.make} ${car.model}`);
+    // Implement actual favorite toggling logic here, e.g., update a service or local storage.
+  }
+
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
@@ -105,7 +108,7 @@ export class Body implements AfterViewInit {
 
     // Start observing cards after a small delay to ensure DOM is ready
     setTimeout(() => {
-      this.revealCards.forEach((card, index) => {
+      this.revealCards.forEach((card: ElementRef, index: number) => {
         card.nativeElement.setAttribute('data-animation-delay', (index * 80).toString());
         observer.observe(card.nativeElement);
       });

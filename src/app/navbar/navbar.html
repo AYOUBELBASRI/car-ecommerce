@@ -3,6 +3,7 @@
         'bg-transparent': !isScrolled,
         'bg-white/80 backdrop-blur-md border-b border-slate-200': isScrolled
     }">
+    
     <!-- Logo -->
     <a routerLink="/home" class="flex items-center gap-2 text-xl font-bold cursor-pointer" [ngClass]="{
         'text-white': !isScrolled,
@@ -10,7 +11,7 @@
     }">
         <video src="assets/wheel.mp4" autoplay loop muted playsinline
             class="h-12 w-12 rounded-full animate-spin-slow"></video>
-        <span>LuxeWheels </span>
+        <span>LuxeWheels</span>
     </a>
 
     <!-- Links -->
@@ -18,18 +19,36 @@
         'text-white/90': !isScrolled,
         'text-slate-700': isScrolled
     }">
-        <li><a routerLink="/sell-car" class="cursor-pointer" [ngClass]="{
-            'hover:text-white': !isScrolled,
-            'hover:text-slate-900': isScrolled
-        }">Sell Your Car</a></li>
-        <li><a routerLink="/financing" class="cursor-pointer" [ngClass]="{
-            'hover:text-white': !isScrolled,
-            'hover:text-slate-900': isScrolled
-        }">Financing</a></li>
-        <li><a routerLink="/reviews" class="cursor-pointer" [ngClass]="{
-            'hover:text-white': !isScrolled,
-            'hover:text-slate-900': isScrolled
-        }">Reviews</a></li>
+        <!-- <li>
+            <a routerLink="/used-cars" class="cursor-pointer" [ngClass]="{
+                'hover:text-white': !isScrolled,
+                'hover:text-slate-900': isScrolled
+            }">Used Cars</a>
+        </li>
+        <li>
+            <a routerLink="/new-cars" class="cursor-pointer" [ngClass]="{
+                'hover:text-white': !isScrolled,
+                'hover:text-slate-900': isScrolled
+            }">New Cars</a>
+        </li> -->
+        <li>
+            <a routerLink="/sell-car" class="cursor-pointer" [ngClass]="{
+                'hover:text-white': !isScrolled,
+                'hover:text-slate-900': isScrolled
+            }">Sell Your Car</a>
+        </li>
+        <li>
+            <a routerLink="/financing" class="cursor-pointer" [ngClass]="{
+                'hover:text-white': !isScrolled,
+                'hover:text-slate-900': isScrolled
+            }">Financing</a>
+        </li>
+        <li>
+            <a routerLink="/reviews" class="cursor-pointer" [ngClass]="{
+                'hover:text-white': !isScrolled,
+                'hover:text-slate-900': isScrolled
+            }">Reviews</a>
+        </li>
     </ul>
 
     <!-- Actions -->
