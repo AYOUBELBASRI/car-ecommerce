@@ -1,1 +1,64 @@
-<p>Admin cars management works!</p>
+<div class="p-6">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Cars Listing (Products)</h2>
+
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="p-6 flex justify-between items-center">
+            <input type="text" placeholder="Search cars..."
+                class="w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Add New
+                Car</button>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Make
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Year
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Status</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    @for (car of cars; track car.id) {
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ car.id }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <img [src]="car.image" alt="{{ car.make }} {{ car.model }}"
+                                class="h-10 w-10 object-cover rounded-full">
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ car.make }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ car.model }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ car.year }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${{ car.price | number }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <span [class.bg-green-100]="car.status === 'Available'"
+                                [class.text-green-800]="car.status === 'Available'"
+                                [class.bg-red-100]="car.status === 'Sold'" [class.text-red-800]="car.status === 'Sold'"
+                                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full">
+                                {{ car.status }}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <a href="#" class="text-blue-600 hover:text-blue-900 mr-3">Edit</a>
+                            <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

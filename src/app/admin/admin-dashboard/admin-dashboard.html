@@ -55,8 +55,7 @@
         </p>
       </div>
       <svg class="h-8 w-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M15 19l-7-7 7-7m-5 5l5 5m-5-5h8">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7m-5 5l5 5m-5-5h8">
         </path>
       </svg>
     </div>
@@ -77,9 +76,7 @@
         <p class="text-sm text-gray-500">This Month</p>
       </div>
       <div style="display: block; height: 200px;">
-        <canvas baseChart
-          [data]="revenueVsOrdersChartData"
-          [options]="revenueVsOrdersChartOptions"
+        <canvas baseChart [data]="revenueVsOrdersChartData" [options]="revenueVsOrdersChartOptions"
           [type]="revenueVsOrdersChartType">
         </canvas>
       </div>
@@ -92,9 +89,7 @@
         <a href="#" class="text-sm text-blue-600 hover:underline">See All</a>
       </div>
       <div class="relative flex items-center justify-center" style="height: 200px;">
-        <canvas baseChart
-          [data]="saleCategoryDonutChartData"
-          [options]="saleCategoryDonutChartOptions"
+        <canvas baseChart [data]="saleCategoryDonutChartData" [options]="saleCategoryDonutChartOptions"
           [type]="saleCategoryDonutChartType">
         </canvas>
         <div class="absolute text-center">
@@ -113,8 +108,7 @@
         <div class="flex items-center space-x-2">
           <input type="text" placeholder="Search..."
             class="px-3 py-1 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <select
-            class="px-3 py-1 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select class="px-3 py-1 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option>This week</option>
             <option>This month</option>
             <option>This year</option>

@@ -16,11 +16,11 @@ import { ContactSuccess } from './contact-success/contact-success';
 import { AdminLoginComponent } from './admin/admin-login/admin-login';
 import { AdminDashboard } from './admin/admin-dashboard/admin-dashboard';
 import { AdminLayout } from './admin/admin-layout/admin-layout';
-import { AdminCustomersComponent } from './admin/admin-customers/admin-customers';
-import { AdminProductsComponent } from './admin/admin-products/admin-products';
-import { AdminOrdersComponent } from './admin/admin-orders/admin-orders';
-import { AdminMessagesComponent } from './admin/admin-messages/admin-messages';
-import { AdminSettingsComponent } from './admin/admin-settings/admin-settings';
+import { AdminCustomers } from './admin/admin-customers/admin-customers';
+import { AdminProducts } from './admin/admin-products/admin-products';
+import { AdminOrders } from './admin/admin-orders/admin-orders';
+import { AdminMessages } from './admin/admin-messages/admin-messages';
+import { AdminSettings } from './admin/admin-settings/admin-settings';
 import { AdminAuthGuard } from './admin/admin-auth/admin-auth.guard';
 import { introRefreshGuard } from './intro/intro-refresh.guard';
 
@@ -94,23 +94,23 @@ export const routes: Routes = [
       },
       {
         path: 'customers',
-        component: AdminCustomersComponent
+        component: AdminCustomers
       },
       {
         path: 'products',
-        component: AdminProductsComponent
+        component: AdminProducts
       },
       {
         path: 'orders',
-        component: AdminOrdersComponent
+        component: AdminOrders
       },
       {
         path: 'messages',
-        component: AdminMessagesComponent
+        component: AdminMessages
       },
       {
         path: 'settings',
-        component: AdminSettingsComponent
+        component: AdminSettings
       }
     ]
   },

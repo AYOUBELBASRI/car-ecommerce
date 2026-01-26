@@ -1,0 +1,91 @@
+ERROR ReferenceError: localStorage is not defined
+    at _AdminAuthGuard.canActivate (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\src\app\admin\admin-auth\admin-auth.guard.ts:11:29)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\@angular\router\fesm2022\_router-chunk.mjs:2442:53)
+    at _Observable._subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\observable\defer.js:5:19)
+    at _Observable._trySubscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:37:25)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:31:30)
+    at errorContext (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\util\errorContext.js:19:9)
+    at _Observable.subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:22:9)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\operators\take.js:10:20)
+    at OperatorSubscriber.<anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\util\lift.js:10:28)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:26:30)
+ERROR ReferenceError: localStorage is not defined
+    at _AdminAuthGuard.canActivate (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\src\app\admin\admin-auth\admin-auth.guard.ts:11:29)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\@angular\router\fesm2022\_router-chunk.mjs:2442:53)
+    at _Observable._subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\observable\defer.js:5:19)
+    at _Observable._trySubscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:37:25)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:31:30)
+    at errorContext (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\util\errorContext.js:19:9)
+    at _Observable.subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:22:9)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\operators\take.js:10:20)
+    at OperatorSubscriber.<anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\util\lift.js:10:28)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:26:30)
+ERROR ReferenceError: localStorage is not defined
+    at _AdminAuthGuard.canActivate (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\src\app\admin\admin-auth\admin-auth.guard.ts:11:29)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\@angular\router\fesm2022\_router-chunk.mjs:2442:53)
+    at _Observable._subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\observable\defer.js:5:19)
+    at _Observable._trySubscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:37:25)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:31:30)
+    at errorContext (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\util\errorContext.js:19:9)
+    at _Observable.subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:22:9)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\operators\take.js:10:20)
+    at OperatorSubscriber.<anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\util\lift.js:10:28)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\f01ac208-7037-48f2-9c32-1ca50a643008\node_modules\rxjs\dist\esm\internal\Observable.js:26:30)
+ERROR ReferenceError: localStorage is not defined
+    at _AdminAuthGuard.canActivate (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\src\app\admin\admin-auth\admin-auth.guard.ts:11:29)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\@angular\router\fesm2022\_router-chunk.mjs:2442:53)
+    at _Observable._subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\observable\defer.js:5:19)
+    at _Observable._trySubscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:37:25)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:31:30)
+    at errorContext (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\util\errorContext.js:19:9)
+    at _Observable.subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:22:9)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\operators\take.js:10:20)
+    at OperatorSubscriber.<anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\util\lift.js:10:28)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:26:30)
+ERROR ReferenceError: localStorage is not defined
+    at _AdminAuthGuard.canActivate (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\src\app\admin\admin-auth\admin-auth.guard.ts:11:29)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\@angular\router\fesm2022\_router-chunk.mjs:2442:53)
+    at _Observable._subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\observable\defer.js:5:19)
+    at _Observable._trySubscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:37:25)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:31:30)
+    at errorContext (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\util\errorContext.js:19:9)
+    at _Observable.subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:22:9)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\operators\take.js:10:20)
+    at OperatorSubscriber.<anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\util\lift.js:10:28)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\878682bc-9464-4103-bd8c-aa782933321a\node_modules\rxjs\dist\esm\internal\Observable.js:26:30)
+ERROR ReferenceError: localStorage is not defined
+    at _AdminAuthGuard.canActivate (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\src\app\admin\admin-auth\admin-auth.guard.ts:11:29)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\@angular\router\fesm2022\_router-chunk.mjs:2442:53)
+    at _Observable._subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\observable\defer.js:5:19)
+    at _Observable._trySubscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:37:25)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:31:30)
+    at errorContext (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\util\errorContext.js:19:9)
+    at _Observable.subscribe (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:22:9)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\operators\take.js:10:20)
+    at OperatorSubscriber.<anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\util\lift.js:10:28)
+    at <anonymous> (C:\Users\usern\Desktop\car-ecommerce\.angular\prerender-root\7e4d826a-1ceb-492f-a21c-48ecd0a85090\node_modules\rxjs\dist\esm\internal\Observable.js:26:30)
+[35mBrowser bundles[39m     
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.js[39m             [2m | [22m[2mmain[22m            [2m | [22m  [36m1.75 MB[39m[2m | [22m
+[32mstyles.css[39m          [2m | [22m[2mstyles[22m          [2m | [22m [36m44.84 kB[39m[2m | [22m
+
+[1m [22m                   [2m | [22m[1mInitial total[22m   [2m | [22m  [1m1.79 MB[22m
+
+
+[35mServer bundles[39m      
+[1mInitial chunk files[22m [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mmain.server.mjs[39m     [2m | [22m[2mmain.server[22m     [2m | [22m  [36m2.62 MB[39m[2m | [22m
+[32mserver.mjs[39m          [2m | [22m[2mserver[22m          [2m | [22m  [36m1.94 MB[39m[2m | [22m
+[32mpolyfills.server.mjs[39m[2m | [22m[2mpolyfills.server[22m[2m | [22m[36m427.77 kB[39m[2m | [22m
+[32mchunk-3II4UTYF.mjs[39m  [2m | [22m[2m-[22m               [2m | [22m  [36m2.81 kB[39m[2m | [22m
+[32mchunk-T2KOBY73.mjs[39m  [2m | [22m[2m-[22m               [2m | [22m  [36m2.01 kB[39m[2m | [22m
+
+[1mLazy chunk files[22m    [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mchunk-F5FD6IK3.mjs[39m  [2m | [22m[2mxhr2[22m            [2m | [22m [36m40.11 kB[39m[2m | [22m
+[32mchunk-5QAFQH3E.mjs[39m  [2m | [22m[2mxhr2[22m            [2m | [22m [36m40.04 kB[39m[2m | [22m
+
+[35mPrerendered 21 static routes.[39m
+Application bundle generation complete. [46.549 seconds] - 2026-01-26T09:58:26.415Z
+
+Output location: C:\Users\usern\Desktop\car-ecommerce\dist\my-cars
+

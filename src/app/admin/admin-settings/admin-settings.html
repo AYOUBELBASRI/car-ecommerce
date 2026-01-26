@@ -1,1 +1,36 @@
-<p>Admin settings management works!</p>
+<div class="p-6">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Settings</h2>
+
+  <div class="bg-white rounded-lg shadow-md p-6">
+    <form (ngSubmit)="saveSettings()" class="space-y-6">
+      <div>
+        <label for="siteTitle" class="block text-sm font-medium text-gray-700 mb-2">Site Title</label>
+        <input type="text" id="siteTitle" name="siteTitle" [(ngModel)]="siteTitle"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="emailNotifications" class="flex items-center space-x-3 cursor-pointer">
+          <input type="checkbox" id="emailNotifications" name="emailNotifications"
+            [(ngModel)]="emailNotifications"
+            class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500">
+          <span class="text-sm font-medium text-gray-700">Enable Email Notifications</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="appTheme" class="block text-sm font-medium text-gray-700 mb-2">App Theme</label>
+        <select id="appTheme" name="appTheme" [(ngModel)]="appTheme"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <button type="submit"
+        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+        Save Settings
+      </button>
+    </form>
+  </div>
+</div>
