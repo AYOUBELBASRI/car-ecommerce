@@ -1,0 +1,32 @@
+<div class="min-h-screen bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16 py-8">
+    <h1 class="text-3xl font-bold mb-6">Car Parts</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      @for (part of parts; track part.id) {
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <a [routerLink]="['/parts', part.id]">
+          <img [src]="part.image" [alt]="part.name" class="w-full h-48 object-cover">
+        </a>
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            <a [routerLink]="['/parts', part.id]" class="hover:text-blue-600">{{ part.name }}</a>
+          </h3>
+          <p class="text-gray-600 text-sm mb-3 line-clamp-2">{{ part.description }}</p>
+          <p class="text-2xl font-bold text-blue-600 mb-4">${{ part.price | number:'1.2-2' }}</p>
+          <button (click)="addToCart(part)"
+            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+
+    @if (parts.length === 0) {
+    <div class="text-center py-12 text-gray-500">
+      No parts found.
+    </div>
+    }
+  </div>
+</div>

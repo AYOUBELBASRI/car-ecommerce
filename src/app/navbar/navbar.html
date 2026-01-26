@@ -53,6 +53,19 @@
 
     <!-- Actions -->
     <div class="flex items-center gap-4">
+        <a routerLink="/cart" class="relative text-gray-700 hover:text-gray-900 transition" [ngClass]= "{
+            'text-white/90 hover:text-white': !isScrolled,
+            'text-slate-700 hover:text-slate-900': isScrolled
+        }">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            @if (cartItemCount | async; as count) {
+            @if (count > 0) {
+            <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                {{ count }}
+            </span>
+            }
+            }
+        </a>
         <button routerLink="/signin" class="cursor-pointer font-semibold" [ngClass]="{
             'text-white/90 hover:text-white': !isScrolled,
             'text-slate-700 hover:text-slate-900': isScrolled

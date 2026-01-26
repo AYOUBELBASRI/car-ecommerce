@@ -1,0 +1,64 @@
+<div class="min-h-screen bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16 py-8">
+    <div class="mb-6">
+      <a routerLink="/parts" class="text-blue-600 hover:text-blue-700 font-medium">← Back to Parts</a>
+    </div>
+
+    @if (part) {
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="grid md:grid-cols-2 gap-8 p-8">
+        <div>
+          <img [src]="part.image" [alt]="part.name" class="w-full rounded-xl object-cover h-96">
+        </div>
+
+        <div>
+          <h1 class="text-4xl font-bold mb-2">{{ part.name }}</h1>
+          <p class="text-blue-600 text-2xl font-bold mb-4">${{ part.price | number:'1.2-2' }}</p>
+
+          <p class="text-gray-700 mb-6">{{ part.description }}</p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-4">
+              <span class="text-gray-600 font-medium">Car Model:</span>
+              <span class="text-gray-800">{{ part.carModel }}</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-gray-600 font-medium">Stock:</span>
+              <span [class.text-green-600]="part.stock > 10" [class.text-yellow-600]="part.stock <= 10 && part.stock > 0" [class.text-red-600]="part.stock === 0" class="font-bold">
+                @if (part.stock > 0) {
+                {{ part.stock }} in stock
+                } @else {
+                Out of stock
+                }
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 mb-6">
+            <span class="text-gray-700 font-medium">Quantity:</span>
+            <div class="flex items-center border border-gray-300 rounded-lg">
+              <button (click)="decrementQuantity()" [disabled]="quantity <= 1" class="px-4 py-2 text-gray-600 hover:bg-gray-100 disabled:opacity-50">
+                -
+              </button>
+              <span class="px-4 py-2 border-x border-gray-300">{{ quantity }}</span>
+              <button (click)="incrementQuantity()" [disabled]="quantity >= part.stock" class="px-4 py-2 text-gray-600 hover:bg-gray-100 disabled:opacity-50">
+                +
+              </button>
+            </div>
+          </div>
+
+          <button (click)="addToCart()" [disabled]="part.stock === 0"
+            class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200 text-lg font-medium disabled:opacity-50">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    }
+
+    @if (!part) {
+    <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+      <p class="text-xl text-slate-600">Part not found</p>
+    </div>
+    }
+</div>

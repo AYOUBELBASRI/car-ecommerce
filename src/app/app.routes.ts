@@ -21,6 +21,9 @@ import { AdminProducts } from './admin/admin-products/admin-products';
 import { AdminOrders } from './admin/admin-orders/admin-orders';
 import { AdminMessages } from './admin/admin-messages/admin-messages';
 import { AdminSettings } from './admin/admin-settings/admin-settings';
+import { PartsListComponent } from './parts/parts-list/parts-list';
+import { PartDetailsComponent } from './parts/part-details/part-details';
+import { CartComponent } from './cart/cart/cart';
 import { AdminAuthGuard } from './admin/admin-auth/admin-auth.guard';
 import { introRefreshGuard } from './intro/intro-refresh.guard';
 
@@ -133,6 +136,20 @@ export const routes: Routes = [
     path: 'contact-success',
     component: ContactSuccess,
     canActivate: [introRefreshGuard]
-
+  },
+  {
+    path: 'parts',
+    component: PartsListComponent,
+    canActivate: [introRefreshGuard]
+  },
+  {
+    path: 'parts/:id',
+    component: PartDetailsComponent,
+    canActivate: [introRefreshGuard]
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
+    canActivate: [introRefreshGuard]
   }
 ];
