@@ -1,37 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule, DecimalPipe } from '@angular/common';
-import { CartService } from '../../cart/cart.service';
-import { CartItem } from '../../shared/models/part.model';
-import { Observable } from 'rxjs';
+
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CartService } from '../cart.service';
+import { CartItem } from '../../shared/models/part.model';
 
 @Component({
-  selector: 'app-cart',
-  standalone: true,
-  imports: [CommonModule, DecimalPipe, RouterLink],
-  templateUrl: './cart.html',
-  styleUrl: './cart.css',
+    selector: 'app-cart',
+    standalone: true,
+    imports: [CommonModule, RouterLink],
+    templateUrl: './cart.html',
+    styleUrls: ['./cart.css'],
 })
-export class CartComponent implements OnInit {
-  cartItems$: Observable<CartItem[]> | undefined;
-  cartTotal$: Observable<number> | undefined;
+export class CartComponent {
+    cartItems$: Observable<CartItem[]>;
+    cartTotal$: Observable<number>;
 
-  constructor(private cartService: CartService) { }
+    constructor(public cart: CartService) {
+        this.cartItems$ = cart.cartItems;
+        this.cartTotal$ = cart.getCartTotal();
+    }
 
-  ngOnInit(): void {
-    this.cartItems$ = this.cartService.cartItems;
-    this.cartTotal$ = this.cartService.getCartTotal();
-  }
+    updateQuantity(item: CartItem, quantity: number): void {
+        this.cart.updateQuantity(item.id, quantity);
+    }
 
-  updateQuantity(item: CartItem, quantity: number): void {
-    this.cartService.updateQuantity(item.id, quantity);
-  }
+    removeItem(item: CartItem): void {
+        this.cart.removeItem(item.id);
+    }
 
-  removeItem(item: CartItem): void {
-    this.cartService.removeItem(item.id);
-  }
-
-  clearCart(): void {
-    this.cartService.clearCart();
-  }
+    clearCart(): void {
+        this.cart.clearCart();
+    }
 }
