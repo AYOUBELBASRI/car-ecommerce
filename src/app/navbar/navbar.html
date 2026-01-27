@@ -9,8 +9,9 @@
         'text-white': !isScrolled,
         'text-slate-900': isScrolled
     }">
-        <video src="assets/wheel.mp4" autoplay loop muted playsinline
-            class="h-12 w-12 rounded-full animate-spin-slow"></video>
+        <video src="assets/wheel.mp4" id="navLogoVideo" autoplay loop muted playsinline
+            class="h-12 w-12 rounded-full animate-spin-slow" oncanplay="this.muted=true; this.volume=0.0;"
+            style="filter:brightness(70%);"></video>
         <span>LuxeWheels</span>
     </a>
 
