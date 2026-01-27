@@ -13,7 +13,7 @@ export class PartsService {
       description: 'High-performance ceramic brake pads for superior stopping power.',
       price: 75.99,
       carModel: 'Tesla Model 3',
-      image: 'assets/brake_pads.jpg',
+      image: 'assets/piece/Brake-Pads.jpg',
       stock: 50
     },
     {
@@ -22,7 +22,7 @@ export class PartsService {
       description: 'Premium oil filter designed for synthetic oils, ensuring engine longevity.',
       price: 12.50,
       carModel: 'BMW 3 Series',
-      image: 'assets/oil_filter.jpg',
+      image: 'assets/piece/Oil-Filter.jpg',
       stock: 120
     },
     {
@@ -31,7 +31,7 @@ export class PartsService {
       description: 'Iridium spark plugs for improved fuel efficiency and engine performance.',
       price: 49.99,
       carModel: 'Mercedes C-Class',
-      image: 'assets/spark_plugs.jpg',
+      image: 'assets/piece/Spark-Plugs.jpg',
       stock: 80
     },
     {
@@ -40,7 +40,7 @@ export class PartsService {
       description: 'Activated carbon cabin air filter to keep your car\'s interior fresh.',
       price: 25.00,
       carModel: 'Audi A4',
-      image: 'assets/cabin_air_filter.jpg',
+      image: 'assets/piece/Air-Filter.jpg',
       stock: 70
     },
     {
@@ -49,7 +49,7 @@ export class PartsService {
       description: 'All-weather beam wiper blades for clear visibility in any condition.',
       price: 35.50,
       carModel: 'Ford Mustang',
-      image: 'assets/wiper_blades.jpg',
+      image: 'assets/piece/Wiper-Blades.jpg',
       stock: 100
     },
     {
@@ -58,7 +58,7 @@ export class PartsService {
       description: 'OEM replacement tire pressure monitoring system sensor.',
       price: 40.00,
       carModel: 'Tesla Model S',
-      image: 'assets/tpms_sensor.jpg',
+      image: 'assets/piece/Tire-Pressure-Sensor.jpg',
       stock: 60
     },
     {
@@ -67,7 +67,7 @@ export class PartsService {
       description: 'Complete left headlight assembly with LED daytime running lights.',
       price: 250.00,
       carModel: 'BMW X5',
-      image: 'assets/headlight.jpg',
+      image: 'assets/piece/Headlight.jpg',
       stock: 15
     },
     {
@@ -76,7 +76,7 @@ export class PartsService {
       description: 'Brand new alternator for consistent power supply to your vehicle\'s electrical system.',
       price: 180.00,
       carModel: 'Mercedes E-Class',
-      image: 'assets/alternator.jpg',
+      image: 'assets/piece/Alternator.png',
       stock: 20
     }
   ];

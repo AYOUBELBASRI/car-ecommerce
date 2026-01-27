@@ -24,3 +24,7 @@
 .testimonial-card.animated {
   will-change: auto;
 }
+
+.icon-white {
+  filter: brightness(0) invert(1);
+}
