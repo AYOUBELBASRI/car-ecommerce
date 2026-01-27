@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { BackButtonComponent } from '../shared/components/back-button/back-button';
 
 @Component({
   selector: 'app-sell-car',
-  imports: [RouterLink],
+  imports: [BackButtonComponent],
   templateUrl: './sell-car.html',
   styleUrl: './sell-car.css',
 })

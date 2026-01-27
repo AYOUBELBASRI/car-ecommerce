@@ -1,7 +1,7 @@
 <div class="min-h-screen bg-slate-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-16 py-8">
     <div class="mb-6">
-      <a routerLink="/parts" class="text-blue-600 hover:text-blue-700 font-medium">← Back to Parts</a>
+      <app-back-button label="Back to Parts" route="/parts"></app-back-button>
     </div>
 
     @if (part) {
@@ -13,7 +13,7 @@
 
         <div>
           <h1 class="text-4xl font-bold mb-2">{{ part.name }}</h1>
-          <p class="text-blue-600 text-2xl font-bold mb-4">${{ part.price | number:'1.2-2' }}</p>
+          <p class="text-[#343a40] text-2xl font-bold mb-4">${{ part.price | number:'1.2-2' }}</p>
 
           <p class="text-gray-700 mb-6">{{ part.description }}</p>
 
@@ -48,7 +48,7 @@
           </div>
 
           <button (click)="addToCart()" [disabled]="part.stock === 0"
-            class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200 text-lg font-medium disabled:opacity-50">
+            class="w-full bg-[#343a40] text-white py-3 rounded-lg hover:bg-[#495057] transition duration-200 text-lg font-medium disabled:opacity-50">
             Add to Cart
           </button>
         </div>

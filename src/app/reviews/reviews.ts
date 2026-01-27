@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { BackButtonComponent } from '../shared/components/back-button/back-button';
 
 @Component({
   selector: 'app-reviews',
-  imports: [RouterLink, DecimalPipe],
+  imports: [DecimalPipe, BackButtonComponent],
   templateUrl: './reviews.html',
   styleUrl: './reviews.css',
 })

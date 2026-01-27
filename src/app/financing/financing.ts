@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { RouterLink } from '@angular/router';
+import { BackButtonComponent } from '../shared/components/back-button/back-button';
 
 @Component({
   selector: 'app-financing',
-  imports: [RouterLink],
+  imports: [BackButtonComponent],
   templateUrl: './financing.html',
   styleUrl: './financing.css',
 })

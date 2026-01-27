@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { DecimalPipe } from '@angular/common';
 import { Car, CarDataService } from '../car-data.service';
+import { BackButtonComponent } from '../shared/components/back-button/back-button';
 
 @Component({
   selector: 'app-car-details',
-  imports: [RouterLink, DecimalPipe],
+  imports: [RouterLink, DecimalPipe, BackButtonComponent],
   templateUrl: './car-details.html',
   styleUrl: './car-details.css',
 })
