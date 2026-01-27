@@ -29,16 +29,22 @@
 
       <div class="flex justify-end items-center mt-6 pt-4 border-t border-gray-200">
         <p class="text-xl font-bold text-gray-900 mr-4">Total:</p>
-        <p class="text-2xl font-bold text-blue-600">{{ cartTotal$ | async | number:'1.2-2' }}</p>
+        <p class="text-2xl font-bold" style="color: #343a40;">{{ cartTotal$ | async | number:'1.2-2' }}</p>
       </div>
 
       <div class="flex justify-end gap-4 mt-6">
         <button (click)="clearCart()"
-          class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition">
+          class="px-6 py-3 border-2 rounded-lg text-white transition"
+          style="border-color: #343a40; background-color: #343a40;"
+          onmouseover="this.style.backgroundColor='#2a2d31'"
+          onmouseout="this.style.backgroundColor='#343a40'">
           Clear Cart
         </button>
         <button routerLink="/checkout"
-          class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          class="px-6 py-3 text-white rounded-lg transition"
+          style="background-color: #343a40;"
+          onmouseover="this.style.backgroundColor='#2a2d31'"
+          onmouseout="this.style.backgroundColor='#343a40'">
           Proceed to Checkout
         </button>
       </div>

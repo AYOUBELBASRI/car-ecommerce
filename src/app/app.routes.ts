@@ -24,6 +24,7 @@ import { AdminSettings } from './admin/admin-settings/admin-settings';
 import { PartsListComponent } from './parts/parts-list/parts-list';
 import { PartDetailsComponent } from './parts/part-details/part-details';
 import { CartComponent } from './cart/cart/cart';
+import { CheckoutComponent } from './checkout/checkout';
 import { AdminAuthGuard } from './admin/admin-auth/admin-auth.guard';
 import { introRefreshGuard } from './intro/intro-refresh.guard';
 
@@ -150,6 +151,11 @@ export const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent,
+    canActivate: [introRefreshGuard]
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent,
     canActivate: [introRefreshGuard]
   }
 ];

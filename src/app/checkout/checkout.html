@@ -1,0 +1,115 @@
+<div class="min-h-screen bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16 py-8">
+    <h1 class="text-3xl font-bold mb-8">Checkout</h1>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Order Summary -->
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+          <h2 class="text-2xl font-bold mb-6">Order Summary</h2>
+          
+          @if ((cartItems$ | async)!.length > 0) {
+            @if (cartItems$ | async; as items) {
+              @for (item of items; track item.id) {
+                <div class="flex items-center border-b border-gray-200 py-4 last:border-b-0">
+                  <img [src]="item.image" [alt]="item.name" class="w-16 h-16 object-cover rounded-lg mr-4">
+                  <div class="flex-1">
+                    <h3 class="font-bold text-gray-900">{{ item.name }}</h3>
+                    <p class="text-gray-600 text-sm">{{ item.carModel }}</p>
+                    <p class="text-blue-600 font-bold mt-1">${{ item.price | number:'1.2-2' }} x {{ item.quantity }}</p>
+                  </div>
+                  <p class="font-bold text-gray-900">${{ (item.price * item.quantity) | number:'1.2-2' }}</p>
+                </div>
+              }
+            }
+          }
+        </div>
+
+        <!-- Shipping & Billing -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+          <h2 class="text-2xl font-bold mb-6">Shipping & Billing</h2>
+          
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" placeholder="First Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+              <input type="text" placeholder="Last Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+            </div>
+            <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+            <input type="text" placeholder="Street Address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <input type="text" placeholder="City" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+              <input type="text" placeholder="State/Province" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+              <input type="text" placeholder="Postal Code" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+            </div>
+            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+          </form>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <h2 class="text-2xl font-bold mb-6">Payment Method</h2>
+          
+          <form class="space-y-4">
+            <div class="mb-6">
+              <label class="flex items-center mb-4">
+                <input type="radio" name="paymentMethod" value="card" checked class="mr-3" id="cardPayment">
+                <span class="text-lg font-semibold text-gray-900">Credit/Debit Card</span>
+              </label>
+            </div>
+
+            <div id="cardPaymentForm" class="space-y-4">
+              <input type="text" placeholder="Cardholder Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+              <input type="text" placeholder="Card Number (16 digits)" maxlength="16" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+              <div class="grid grid-cols-3 gap-4">
+                <input type="text" placeholder="MM/YY" maxlength="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+                <input type="text" placeholder="CVV" maxlength="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+                <input type="text" placeholder="ZIP Code" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Order Total & Payment -->
+      <div>
+        <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-8">
+          <h2 class="text-2xl font-bold mb-6">Order Total</h2>
+          
+          <div class="space-y-3 mb-6 pb-6 border-b border-gray-200">
+            <div class="flex justify-between">
+              <span class="text-gray-600">Subtotal:</span>
+              <span class="font-bold">${{ cartTotal$ | async | number:'1.2-2' }}</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Shipping:</span>
+              <span class="font-bold">Free</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Tax:</span>
+              <span class="font-bold">${{ ((cartTotal$ | async) || 0) * 0.1 | number:'1.2-2' }}</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-6">
+            <span class="text-xl font-bold">Total:</span>
+            <span class="text-2xl font-bold text-blue-600">${{ ((cartTotal$ | async) || 0) * 1.1 | number:'1.2-2' }}</span>
+          </div>
+
+          <button (click)="placeOrder()" class="w-full px-6 py-3 text-white rounded-lg transition font-bold mb-3"
+            style="background-color: #343a40; border: 2px solid #343a40;"
+            onmouseover="this.style.backgroundColor='#2a2d31'"
+            onmouseout="this.style.backgroundColor='#343a40'">
+            Place Order
+          </button>
+
+          <button routerLink="/cart" class="w-full px-6 py-3 rounded-lg transition"
+            style="border: 2px solid #343a40; color: #343a40;"
+            onmouseover="this.style.backgroundColor='#f0f0f0'"
+            onmouseout="this.style.backgroundColor='transparent'">
+            Back to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
