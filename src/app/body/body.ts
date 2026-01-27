@@ -4,6 +4,8 @@ import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { PartsService } from '../parts/parts.service';
+import { Part } from '../shared/models/part.model';
 
 interface Car {
   id: number;
@@ -34,6 +36,9 @@ interface Testimonial {
 export class Body implements AfterViewInit {
   @ViewChildren('revealCard') revealCards!: QueryList<ElementRef>;
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly partsService = inject(PartsService);
+
+  trendingParts: Part[] = [];
 
   trendingCars: Car[] = [
     { id: 101, year: 2017, make: 'BMW', model: '3 Series', price: 21900, mileage: '54k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
@@ -75,6 +80,17 @@ export class Body implements AfterViewInit {
   onFavoriteToggle(car: Car): void {
     console.log(`Toggled favorite for ${car.make} ${car.model}`);
     // Implement actual favorite toggling logic here, e.g., update a service or local storage.
+  }
+
+  onPartFavoriteToggle(part: Part): void {
+    console.log(`Toggled favorite for ${part.name}`);
+    // Implement actual favorite toggling logic here
+  }
+
+  ngOnInit(): void {
+    this.partsService.getParts().subscribe(parts => {
+      this.trendingParts = parts.slice(0, 4); // Get first 4 parts for trending
+    });
   }
 
   ngAfterViewInit(): void {
