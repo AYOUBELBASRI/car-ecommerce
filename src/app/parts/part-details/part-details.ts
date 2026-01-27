@@ -5,11 +5,12 @@ import { PartsService } from '../../parts/parts.service';
 import { CartService } from '../../cart/cart.service';
 import { Part } from '../../shared/models/part.model';
 import { take } from 'rxjs/operators';
+import { BackButtonComponent } from '../../shared/components/back-button/back-button';
 
 @Component({
   selector: 'app-part-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BackButtonComponent],
   templateUrl: './part-details.html',
   styleUrl: './part-details.css',
 })
