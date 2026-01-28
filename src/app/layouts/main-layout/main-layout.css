@@ -1,0 +1,25 @@
+/* Main layout styles */
+
+.main-content {
+  /* Fixed padding to prevent navbar overlap */
+  padding-top: 7rem;
+  min-height: 100vh;
+}
+
+/* Home page - no padding for full-screen hero */
+:host-context([ng-version]) .main-content:has(app-home) {
+  padding-top: 0;
+}
+
+/* Responsive padding adjustments */
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding-top: 9rem;
+  }
+}

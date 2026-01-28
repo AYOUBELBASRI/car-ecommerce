@@ -27,6 +27,7 @@ import { CartComponent } from './cart/cart/cart';
 import { CheckoutComponent } from './checkout/checkout';
 import { AdminAuthGuard } from './admin/admin-auth/admin-auth.guard';
 import { introRefreshGuard } from './intro/intro-refresh.guard';
+import { MainLayout } from './layouts/main-layout/main-layout';
 
 export const routes: Routes = [
   {
@@ -34,20 +35,12 @@ export const routes: Routes = [
     redirectTo: 'intro',
     pathMatch: 'full'
   },
+  // Intro page without layout
   {
     path: 'intro',
     component: Intro
   },
-  {
-    path: 'home',
-    component: Home,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'cars',
-    component: CarsListing,
-    canActivate: [introRefreshGuard]
-  },
+  // Auth routes without layout
   {
     path: 'signin',
     component: SignIn,
@@ -63,26 +56,7 @@ export const routes: Routes = [
     component: SignUp,
     canActivate: [introRefreshGuard]
   },
-  {
-    path: 'sell-car',
-    component: SellCar,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'financing',
-    component: Financing,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'financing-result',
-    component: FinancingResult,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'reviews',
-    component: Reviews,
-    canActivate: [introRefreshGuard]
-  },
+  // Admin routes without layout
   {
     path: 'admin',
     component: AdminLoginComponent
@@ -118,44 +92,68 @@ export const routes: Routes = [
       }
     ]
   },
+  // Public routes with main layout (navbar + footer)
   {
-    path: 'how-it-works',
-    component: HowItWorks,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'car/:id',
-    component: CarDetails,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'contact-seller',
-    component: User,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'contact-success',
-    component: ContactSuccess,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'parts',
-    component: PartsListComponent,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'parts/:id',
-    component: PartDetailsComponent,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'cart',
-    component: CartComponent,
-    canActivate: [introRefreshGuard]
-  },
-  {
-    path: 'checkout',
-    component: CheckoutComponent,
-    canActivate: [introRefreshGuard]
+    path: '',
+    component: MainLayout,
+    canActivate: [introRefreshGuard],
+    children: [
+      {
+        path: 'home',
+        component: Home
+      },
+      {
+        path: 'cars',
+        component: CarsListing
+      },
+      {
+        path: 'sell-car',
+        component: SellCar
+      },
+      {
+        path: 'financing',
+        component: Financing
+      },
+      {
+        path: 'financing-result',
+        component: FinancingResult
+      },
+      {
+        path: 'reviews',
+        component: Reviews
+      },
+      {
+        path: 'how-it-works',
+        component: HowItWorks
+      },
+      {
+        path: 'car/:id',
+        component: CarDetails
+      },
+      {
+        path: 'contact-seller',
+        component: User
+      },
+      {
+        path: 'contact-success',
+        component: ContactSuccess
+      },
+      {
+        path: 'parts',
+        component: PartsListComponent
+      },
+      {
+        path: 'parts/:id',
+        component: PartDetailsComponent
+      },
+      {
+        path: 'cart',
+        component: CartComponent
+      },
+      {
+        path: 'checkout',
+        component: CheckoutComponent
+      }
+    ]
   }
 ];

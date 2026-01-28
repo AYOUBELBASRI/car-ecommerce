@@ -1,11 +1,10 @@
 import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, PLATFORM_ID, ViewChild, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, Navbar],
+  imports: [RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
