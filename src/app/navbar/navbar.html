@@ -1,25 +1,15 @@
-<nav class="fixed top-0 inset-x-0 z-50 px-6 lg:px-16 py-6 flex items-center justify-between transition-colors duration-300"
-    [ngClass]="{
-        'bg-transparent': !isScrolled,
-        'bg-white/80 backdrop-blur-md border-b border-slate-200': isScrolled
-    }">
+<nav class="fixed top-0 inset-x-0 z-50 px-6 lg:px-16 py-4 flex items-center justify-between transition-colors duration-300 bg-white shadow-md border-b border-slate-200">
     
     <!-- Logo -->
-    <a routerLink="/home" class="flex items-center gap-2 text-xl font-bold cursor-pointer" [ngClass]="{
-        'text-white': !isScrolled,
-        'text-slate-900': isScrolled
-    }">
+    <a routerLink="/home" class="flex items-center gap-2 text-xl font-bold cursor-pointer text-slate-900 hover:text-blue-600 transition">
         <video src="assets/wheel.mp4" id="navLogoVideo" autoplay loop muted playsinline
             class="h-12 w-12 rounded-full animate-spin-slow" oncanplay="this.muted=true; this.volume=0.0;"
-            style="filter:brightness(70%);"></video>
+            style="filter:brightness(100%);"></video>
         <span>LuxeWheels</span>
     </a>
 
     <!-- Links -->
-    <ul class="hidden lg:flex gap-8 font-semibold" [ngClass]="{
-        'text-white/90': !isScrolled,
-        'text-slate-700': isScrolled
-    }">
+    <ul class="hidden lg:flex gap-8 font-semibold text-slate-700">
         <!-- <li>
             <a routerLink="/used-cars" class="cursor-pointer" [ngClass]="{
                 'hover:text-white': !isScrolled,
@@ -33,31 +23,19 @@
             }">New Cars</a>
         </li> -->
         <li>
-            <a routerLink="/sell-car" class="cursor-pointer" [ngClass]="{
-                'hover:text-white': !isScrolled,
-                'hover:text-slate-900': isScrolled
-            }">Sell Your Car</a>
+            <a routerLink="/sell-car" class="cursor-pointer hover:text-blue-600 transition">Sell Your Car</a>
         </li>
         <li>
-            <a routerLink="/financing" class="cursor-pointer" [ngClass]="{
-                'hover:text-white': !isScrolled,
-                'hover:text-slate-900': isScrolled
-            }">Financing</a>
+            <a routerLink="/financing" class="cursor-pointer hover:text-blue-600 transition">Financing</a>
         </li>
         <li>
-            <a routerLink="/reviews" class="cursor-pointer" [ngClass]="{
-                'hover:text-white': !isScrolled,
-                'hover:text-slate-900': isScrolled
-            }">Reviews</a>
+            <a routerLink="/reviews" class="cursor-pointer hover:text-blue-600 transition">Reviews</a>
         </li>
     </ul>
 
     <!-- Actions -->
     <div class="flex items-center gap-4">
-        <a routerLink="/cart" class="relative text-gray-700 hover:text-gray-900 transition" [ngClass]= "{
-            'text-white/90 hover:text-white': !isScrolled,
-            'text-slate-700 hover:text-slate-900': isScrolled
-        }">
+        <a routerLink="/cart" class="relative text-slate-700 hover:text-blue-600 transition text-xl">
             <i class="fas fa-shopping-cart text-xl"></i>
             @if (cartItemCount | async; as count) {
             @if (count > 0) {
@@ -67,14 +45,14 @@
             }
             }
         </a>
-        <button routerLink="/signin" class="cursor-pointer font-semibold" [ngClass]="{
-            'text-white/90 hover:text-white': !isScrolled,
-            'text-slate-700 hover:text-slate-900': isScrolled
-        }">
+        <button routerLink="/signin" class="cursor-pointer font-semibold text-slate-700 hover:text-blue-600 transition">
             Sign In
         </button>
         <button routerLink="/signup"
-            class="cursor-pointer bg-[#343a40] text-white px-5 py-2 rounded-lg hover:bg-[#495057]">
+            class="cursor-pointer text-white px-5 py-2 rounded-lg transition font-semibold"
+            style="background-color: #343a40;"
+            onmouseover="this.style.backgroundColor='#2a2d31'"
+            onmouseout="this.style.backgroundColor='#343a40'">
             Get Started
         </button>
     </div>
