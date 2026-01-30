@@ -10,6 +10,7 @@ export interface Car {
     fuel: string;
     drive: string;
     image: string;
+    video?: string;
     description: string;
     authorName?: string;
     authorRole?: string;
@@ -29,6 +30,7 @@ export class CarDataService {
             fuel: 'Gasoline',
             drive: 'RWD',
             image: 'assets/bmww.jpg',
+            video: 'assets/Generation1.mp4',
             description: 'Well-maintained BMW 3 Series with a smooth ride, premium interior, and balanced performance.'
         },
         {

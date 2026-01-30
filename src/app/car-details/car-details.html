@@ -8,7 +8,13 @@
     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
       <div class="grid md:grid-cols-2 gap-8 p-8">
         <div>
-          <img [src]="car.image" [alt]="car.make + ' ' + car.model" class="w-full rounded-xl">
+          @if (car.video) {
+            <video [src]="car.video" [poster]="car.image" class="w-full rounded-xl" controls preload="metadata">
+              Your browser does not support the video tag.
+            </video>
+          } @else {
+            <img [src]="car.image" [alt]="car.make + ' ' + car.model" class="w-full rounded-xl">
+          }
         </div>
 
         <div>
