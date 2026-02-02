@@ -1,7 +1,8 @@
 <div class="min-h-screen bg-slate-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-16 py-8">
-    <div class="mb-6">
+    <div class="mb-6 flex gap-4 items-center">
       <app-back-button label="Back to Parts" route="/parts"></app-back-button>
+      <app-back-button label="Back to Home" route="/home" [useHistory]="false"></app-back-button>
     </div>
 
     @if (part) {
