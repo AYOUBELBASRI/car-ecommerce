@@ -8,9 +8,14 @@
     <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
       <div class="grid md:grid-cols-2 gap-8 p-8">
         <div>
-          <!-- Image Gallery with Pagination -->
+          <!-- Image/Video Gallery with Pagination -->
           <div class="relative">
-            <img [src]="carGalleryImages[currentImageIndex]" [alt]="car.make + ' ' + car.model" class="w-full rounded-xl h-96 object-cover">
+            <ng-container *ngIf="carGalleryMedia.length">
+              <img *ngIf="carGalleryMedia[currentMediaIndex].type === 'image'"
+                   [src]="carGalleryMedia[currentMediaIndex].src" [alt]="car.make + ' ' + car.model" class="w-full rounded-xl h-96 object-cover">
+              <video *ngIf="carGalleryMedia[currentMediaIndex].type === 'video'"
+                     [src]="carGalleryMedia[currentMediaIndex].src" controls class="w-full rounded-xl h-96 object-cover" playsinline></video>
+            </ng-container>
             
             <!-- Navigation Arrows -->
             <button (click)="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 p-2 rounded-full transition shadow-md">
@@ -20,19 +25,20 @@
               <i class="fas fa-chevron-right text-xl"></i>
             </button>
 
-            <!-- Image Counter -->
+            <!-- Media Counter -->
             <div class="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              {{ currentImageIndex + 1 }} / {{ carGalleryImages.length }}
+              {{ currentMediaIndex + 1 }} / {{ carGalleryMedia.length }}
             </div>
           </div>
 
           <!-- Pagination Dots/Thumbnails -->
           <div class="mt-4 flex gap-2 overflow-x-auto pb-2">
-            @for (image of carGalleryImages; track $index) {
+            @for (media of carGalleryMedia; track $index) {
             <button (click)="goToImage($index)" 
-              [ngClass]="{'ring-2 ring-blue-600': currentImageIndex === $index}"
+              [ngClass]="{'ring-2 ring-blue-600': currentMediaIndex === $index}"
               class="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-gray-200 hover:border-blue-600 transition">
-              <img [src]="image" [alt]="'Car image ' + ($index + 1)" class="w-full h-full object-cover">
+              <img *ngIf="media.type === 'image'" [src]="media.src" [alt]="'Car image ' + ($index + 1)" class="w-full h-full object-cover">
+              <video *ngIf="media.type === 'video'" [src]="media.src" muted loop class="w-full h-full object-cover"></video>
             </button>
             }
           </div>

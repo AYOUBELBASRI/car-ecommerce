@@ -44,7 +44,12 @@ export class Body implements AfterViewInit {
     { id: 101, year: 2017, make: 'BMW', model: '3 Series', price: 21900, mileage: '54k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
     { id: 102, year: 2018, make: 'Audi', model: 'A4', price: 23900, mileage: '46k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
     { id: 103, year: 2019, make: 'Mercedes', model: 'C-Class', price: 27900, mileage: '38k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/merc.jpg' },
-    { id: 104, year: 2016, make: 'Toyota', model: 'Camry', price: 17900, mileage: '72k miles', fuel: 'Gasoline', drive: 'FWD', image: 'assets/toyota.jpg' }
+    { id: 104, year: 2016, make: 'Ford', model: 'Mustang', price: 19900, mileage: '62k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/mustang.jpg' },
+    { id: 105, year: 2020, make: 'Tesla', model: 'Model 3', price: 34900, mileage: '22k miles', fuel: 'Electric', drive: 'AWD', image: 'assets/teslahero.jpg' },
+    { id: 106, year: 2015, make: 'Toyota', model: 'Camry', price: 17900, mileage: '72k miles', fuel: 'Gasoline', drive: 'FWD', image: 'assets/toyota.jpg' },
+    { id: 107, year: 2018, make: 'Range Rover', model: 'Velar', price: 45900, mileage: '32k miles', fuel: 'Diesel', drive: 'AWD', image: 'assets/new-range.jpg' },
+    { id: 108, year: 2017, make: 'Ford', model: 'RS7', price: 55900, mileage: '28k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audirs7.jpg' },
+
   ];
 
   features = [
