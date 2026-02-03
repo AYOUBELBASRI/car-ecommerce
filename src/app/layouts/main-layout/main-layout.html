@@ -1,5 +1,5 @@
 <app-navbar />
-<main class="main-content">
+<main class="main-content" [class.no-navbar-padding]="isHomeRoute">
   <router-outlet />
 </main>
 <app-footer />
