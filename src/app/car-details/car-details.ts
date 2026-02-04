@@ -27,8 +27,7 @@ export class CarDetails {
       'assets/BMW.mp4',
     ],
     'Tesla': [
-      'assets/teslahero.jpg',
-      'assets/tesla1.jpg'
+      'assets/tesla1.jpg',
     ],
     'Mercedes': [
       'assets/merc.jpg',

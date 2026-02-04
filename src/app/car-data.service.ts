@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { range } from 'rxjs';
 
 export interface Car {
     id: number;
@@ -88,7 +89,7 @@ export class CarDataService {
             mileage: '49k miles',
             fuel: 'Diesel',
             drive: 'AWD',
-            image: 'assets/jag.jpg',
+            image: 'assets/new-range.jpg',
             description: 'Range Rover Evoque with premium finishes, confident AWD traction, and city-friendly size.'
         },
         {
@@ -124,7 +125,7 @@ export class CarDataService {
             mileage: '0 miles',
             fuel: 'Gasoline',
             drive: 'RWD',
-            image: 'assets/new-range.jpg',
+            image: 'assets/martin-katler-dlqYkIlDa3k-unsplash.jpg',
             description: 'Brand-new Porsche 911 Carrera featuring precision handling, iconic design, and a driver-first cockpit.',
             authorName: 'LuxeWheels',
             authorRole: 'Official Dealer',
