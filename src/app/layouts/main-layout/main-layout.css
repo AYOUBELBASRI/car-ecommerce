@@ -1,5 +1,10 @@
 /* Main layout styles */
 
+:host {
+  display: block;
+  overflow: visible;
+}
+
 .main-content {
   /* Fixed padding to prevent navbar overlap */
   padding-top: 7rem;
@@ -7,7 +12,7 @@
 }
 
 /* Home page - no padding for full-screen hero */
-:host-context([ng-version]) .main-content:has(app-home) {
+.main-content.no-navbar-padding {
   padding-top: 0;
 }
 
@@ -16,10 +21,18 @@
   .main-content {
     padding-top: 8rem;
   }
+
+  .main-content.no-navbar-padding {
+    padding-top: 0;
+  }
 }
 
 @media (min-width: 1024px) {
   .main-content {
     padding-top: 9rem;
+  }
+
+  .main-content.no-navbar-padding {
+    padding-top: 0;
   }
 }
