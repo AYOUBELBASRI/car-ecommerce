@@ -18,6 +18,7 @@ import { AdminDashboard } from './admin/admin-dashboard/admin-dashboard';
 import { AdminLayout } from './admin/admin-layout/admin-layout';
 import { AdminCustomers } from './admin/admin-customers/admin-customers';
 import { AdminProducts } from './admin/admin-products/admin-products';
+import { AdminProductAdd } from './admin/admin-product-add/admin-product-add';
 import { AdminOrders } from './admin/admin-orders/admin-orders';
 import { AdminMessages } from './admin/admin-messages/admin-messages';
 import { AdminSettings } from './admin/admin-settings/admin-settings';
@@ -77,6 +78,10 @@ export const routes: Routes = [
       {
         path: 'products',
         component: AdminProducts
+      },
+      {
+        path: 'products/add',
+        component: AdminProductAdd
       },
       {
         path: 'orders',
