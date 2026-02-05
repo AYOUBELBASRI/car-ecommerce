@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule, DecimalPipe } from '@angular/common';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-admin-products',
   standalone: true,
@@ -10,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './admin-products.css',
 })
 export class AdminProducts {
-  private router = inject(Router);
+  constructor(private router: Router) {}
   cars = [
     {
       id: 1,
@@ -60,6 +59,7 @@ export class AdminProducts {
   ];
 
   addNewCar(): void {
-    this.router.navigate(['/admin-dashboard/products/add']);
+    this.router.navigate(['/cars']);
   }
 }
+

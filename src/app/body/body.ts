@@ -2,6 +2,8 @@ import { Component, AfterViewInit, ViewChildren, ElementRef, inject, PLATFORM_ID
 import { isPlatformBrowser } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PartsService } from '../parts/parts.service';
 import { Part } from '../shared/models/part.model';
 
@@ -101,7 +103,13 @@ export class Body implements AfterViewInit {
       return;
     }
 
-    // IntersectionObserver for card reveals
+    // Initialize GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // GSAP scroll animations
+    this.initGSAPAnimations();
+
+    // Keep existing IntersectionObserver for card reveals
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -126,5 +134,99 @@ export class Body implements AfterViewInit {
         observer.observe(card.nativeElement);
       });
     }, 100);
+  }
+
+  private initGSAPAnimations(): void {
+    // Set initial states for elements that will be animated
+    gsap.set('.reveal-card', {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      force3D: true,
+      transformOrigin: 'center center'
+    });
+    gsap.set('.feature-item', {
+      opacity: 1,
+      y: 0,
+      force3D: true
+    });
+    gsap.set('.testimonial-card', {
+      opacity: 1,
+      y: 0,
+      force3D: true
+    });
+
+    // Car cards reveal animation with GSAP (lighter and smoother)
+    gsap.utils.toArray('.reveal-card').forEach((card: any, index: number) => {
+      gsap.fromTo(card,
+        {
+          y: 30,
+          opacity: 0,
+          scale: 0.95,
+          force3D: true,
+          transformOrigin: 'center bottom'
+        },
+        {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play none none reverse',
+            markers: false
+          },
+          duration: 0.6,
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          ease: 'power1.out',
+          delay: index * 0.05,
+          force3D: true
+        }
+      );
+    });
+
+    // Features section animation (simplified)
+    gsap.fromTo('.feature-item',
+      {
+        y: 20,
+        opacity: 0,
+        force3D: true
+      },
+      {
+        scrollTrigger: {
+          trigger: '.features-section',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        },
+        duration: 0.8,
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        ease: 'power1.out',
+        force3D: true
+      }
+    );
+
+    // Testimonials section animation (simplified)
+    gsap.fromTo('.testimonial-card',
+      {
+        y: 20,
+        opacity: 0,
+        force3D: true
+      },
+      {
+        scrollTrigger: {
+          trigger: '.testimonials-section',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        },
+        duration: 0.8,
+        y: 0,
+        opacity: 1,
+        stagger: 0.08,
+        ease: 'power1.out',
+        force3D: true
+      }
+    );
   }
 }
