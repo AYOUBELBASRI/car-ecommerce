@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule, DecimalPipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-products',
@@ -9,6 +10,7 @@ import { CommonModule, DecimalPipe } from '@angular/common';
   styleUrl: './admin-products.css',
 })
 export class AdminProducts {
+  private router = inject(Router);
   cars = [
     {
       id: 1,
@@ -56,4 +58,8 @@ export class AdminProducts {
       image: 'assets/mustang.jpg'
     },
   ];
+
+  addNewCar(): void {
+    this.router.navigate(['/admin-dashboard/products/add']);
+  }
 }
