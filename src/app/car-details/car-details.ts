@@ -42,6 +42,7 @@ export class CarDetails {
     ],
     'Range Rover': [
       'assets/new-range.jpg',
+      'assets/raaaaaaaaaaange.jpg',
 
     ],
     'Audi': [
