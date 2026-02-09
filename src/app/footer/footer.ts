@@ -15,7 +15,7 @@ export class Footer {
   socialIcons = [
     { name: 'twitter', icon: 'fab fa-twitter', link: 'https://x.com/LuxeWheels1' },
     { name: 'instagram', icon: 'fab fa-instagram', link: 'https://www.instagram.com/luxewheels11' },
-    { name: 'linkedin', icon: 'fab fa-linkedin-in', link: 'https://linkedin.com' }
+    { name: 'linkedin', icon: 'fab fa-linkedin-in', link: 'https://www.linkedin.com/in/luxe-wheels-9a40113b0/' }
   ];
 
   currentYear = new Date().getFullYear();
