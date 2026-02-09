@@ -13,10 +13,9 @@ export class Footer {
   buySellLinks = ['Find a Car', 'Sell My Car', 'Car Valuation', 'Certified Pre-Owned', 'Car Reviews'];
   
   socialIcons = [
-    { name: 'facebook', icon: 'fab fa-facebook-f' },
-    { name: 'twitter', icon: 'fab fa-twitter' },
-    { name: 'instagram', icon: 'fab fa-instagram' },
-    { name: 'linkedin', icon: 'fab fa-linkedin-in' }
+    { name: 'twitter', icon: 'fab fa-twitter', link: 'https://x.com/LuxeWheels1' },
+    { name: 'instagram', icon: 'fab fa-instagram', link: 'https://www.instagram.com/luxewheels11' },
+    { name: 'linkedin', icon: 'fab fa-linkedin-in', link: 'https://linkedin.com' }
   ];
 
   currentYear = new Date().getFullYear();

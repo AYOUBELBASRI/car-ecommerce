@@ -29,7 +29,7 @@
           </p>
           <div class="flex gap-4">
             @for (social of socialIcons; track social) {
-            <a href="#"
+            <a href="{{social.link}}" target="_blank" rel="noopener noreferrer"
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#495057] transition-colors">
               <i [class]="social.icon"></i>
             </a>
