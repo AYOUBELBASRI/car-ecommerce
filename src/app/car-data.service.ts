@@ -36,13 +36,13 @@ export class CarDataService {
             id: 102,
             year: 2018,
             make: 'Audi',
-            model: 'A4',
+            model: 'A7',
             price: 23900,
             mileage: '46k miles',
             fuel: 'Gasoline',
             drive: 'AWD',
             image: 'assets/audii.jpg',
-            description: 'Audi A4 with quattro all-wheel drive, comfortable cabin, and strong efficiency for daily driving.'
+            description: 'Audi A7 with quattro all-wheel drive, comfortable cabin, and strong efficiency for daily driving.'
         },
         {
             id: 103,

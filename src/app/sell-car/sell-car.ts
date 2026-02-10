@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackButtonComponent } from '../shared/components/back-button/back-button';
 
 @Component({
@@ -8,4 +9,9 @@ import { BackButtonComponent } from '../shared/components/back-button/back-butto
   styleUrl: './sell-car.css',
 })
 export class SellCar {
+  constructor(private router: Router) {}
+
+  getValuation() {
+    this.router.navigate(['/financing-result']);
+  }
 }

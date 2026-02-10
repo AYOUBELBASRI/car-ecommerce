@@ -49,7 +49,7 @@ export class CarDetails {
       'assets/audii.jpg',
       'assets/audirs7.jpg',
       'assets/omar-ramadan-oGKE0SkHEfQ-unsplash.jpg',
-     'assets/AUDI.mp4',
+      'assets/AUDI.mp4',
     ],
     'Toyota': [
       'assets/toyota.jpg',

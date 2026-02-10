@@ -42,7 +42,7 @@ export class Body implements AfterViewInit {
 
   trendingCars: Car[] = [
     { id: 101, year: 2017, make: 'BMW', model: '3 Series', price: 21900, mileage: '54k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/bmww.jpg' },
-    { id: 102, year: 2018, make: 'Audi', model: 'A4', price: 23900, mileage: '46k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
+    { id: 102, year: 2018, make: 'Audi', model: 'A7', price: 23900, mileage: '46k miles', fuel: 'Gasoline', drive: 'AWD', image: 'assets/audii.jpg' },
     { id: 103, year: 2019, make: 'Mercedes', model: 'C-Class', price: 27900, mileage: '38k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/merc.jpg' },
     { id: 104, year: 2016, make: 'Ford', model: 'Mustang', price: 19900, mileage: '62k miles', fuel: 'Gasoline', drive: 'RWD', image: 'assets/mustang.jpg' },
     { id: 105, year: 2020, make: 'Tesla', model: 'Model 3', price: 34900, mileage: '22k miles', fuel: 'Electric', drive: 'AWD', image: 'assets/teslahero.jpg' },
