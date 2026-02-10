@@ -59,7 +59,7 @@ export class AdminProducts {
   ];
 
   addNewCar(): void {
-    this.router.navigate(['/cars']);
+    this.router.navigate(['/admin-dashboard/products/add']);
   }
 }
 
